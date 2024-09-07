@@ -25,10 +25,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: $line-height-base;
-  font-family: $font-family-en;
-}
-:lang(zh), :lang(zh-TW), :lang(zh-CN) {
-  font-family: $font-family-zh;
 }
 ol, ul {
 	list-style: none;
