@@ -1,4 +1,14 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+nav{
+  .icon-blk{
+    width: 30px;
+    height: 30px;
+  }
+}
+.nav-title{
+  &.default{
+    color: $gray-300 !important;
+  }
+  &.active{
+    color: $primary !important;
+  }
 }
