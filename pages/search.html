@@ -1,24 +1,36 @@
-import './assets/scss/all.scss';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search</title>
+  </head>
+  <body class="max-w-767 mx-auto">
+    <%- include('./layout/header'); -%>
+    <div class="px-6">
+      <h1 class="index-title">search</h1>
+      <div class="container vh-100">
+        <ul class="row">
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+        </ul>
+        <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
+      </div>
+    </div>
+    
+    
 
+    <%- include('./layout/nav'); -%>
 
-
-
-//nav切換偵測
+    <script type="module" src="../main.js"></script>
+    <script>
+      // nav 判斷
 document.addEventListener('DOMContentLoaded', function () {
-    // 根據不同頁面設置 currentPage 值
-    // 可以在各自頁面上設置這個變量，例如在 index.html 是 'today'
-    let currentPage = '';
-  
-    // 根據 URL 自動檢測當前頁面
-    if (window.location.pathname.includes('index.html')) {
-      currentPage = 'today';
-    } else if (window.location.pathname.includes('record.html')) {
-      currentPage = 'record';
-    } else if (window.location.pathname.includes('search.html')) {
-      currentPage = 'search';
-    } else if (window.location.pathname.includes('setting.html')) {
-      currentPage = 'setting';
-    }
+    // 定義當前頁面的對應 id，這裡假設首頁為 "today"
+    const currentPage = 'search';  // 根據頁面設置，例如 'record' 對應紀錄頁
   
     // 獲取所有的 nav 項目
     const navItems = document.querySelectorAll('ul.d-flex li');
@@ -60,4 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navTitle.classList.add('default');
     }
   }
-  
+    </script>
+
+  </body>
+</html>
