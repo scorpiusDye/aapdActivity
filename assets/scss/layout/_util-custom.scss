@@ -45,12 +45,39 @@ table {
 .max-w-767{
 	max-width: 767px;
 }
-.h-54{
+.h-100vh{
+	height: 100vh;
+}
+.w-24px{
+	width: 24px;
+}
+.h-24px{
+	height: 24px;
+}
+.h-48px{
+	height: 48px;
+}
+.h-54px{
 	height: 54px;
 }
-.h-94{
+.h-94px{
 	height: 94px;
+}
+.w-120px{
+	width: 120px;
+} 
+.h-120px{
+	height: 120px;
+}
+.bg-secondary-100{
+	background-color: $orange-100;
+}
+.border-secondary-400{
+	border-color: $orange-400 !important;
 }
 .border-gray-200{
 	border-color: $gray-200 !important;
+}
+.text-primary-900{
+ color: $teal-900;
 }

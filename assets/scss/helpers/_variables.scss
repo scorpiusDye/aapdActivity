@@ -164,7 +164,7 @@ $teal-500: $teal !default;
 $teal-600: shade-color($teal, 20%) !default;
 $teal-700: shade-color($teal, 40%) !default;
 $teal-800: shade-color($teal, 60%) !default;
-$teal-900: shade-color($teal, 80%) !default;
+$teal-900: #223f38;//shade-color($teal, 80%) !default;
 
 $cyan-100: tint-color($cyan, 80%) !default;
 $cyan-200: tint-color($cyan, 60%) !default;

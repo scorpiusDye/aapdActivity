@@ -8,17 +8,51 @@
   </head>
   <body class="max-w-767 mx-auto">
     <%- include('./layout/header'); -%>
-    <div class="px-6">
-      <h1 class="fs-1">今日</h1>
-      <div class="container vh-100">
-        <ul class="row">
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
-        </ul>
-        <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
-      </div>
+    <div class="px-6 h-100vh">
+      <section class="py-7">
+        <h1 class="fs-1 mb-7">今日</h1>
+        <div class="today-card bg-secondary-100 p-5 rounded-2 border border-secondary-400 d-flex">
+          <div class="w-120px h-120px bg-primary rounded-4">
+            <img src="../assets/images/count/count-0.svg" alt="">
+          </div>
+          <div class="py-1 pe-1 ms-5 w-100 d-flex flex-column justify-content-between">
+            <div class="">
+              <span class="fs-8 fw-bold text-primary-900">今日累積攝取</span>
+              <div class="fw-bold text-primary">
+                <span class="fs-3">0 / </span>
+                <span class="fs-5">400 mg</span>
+              </div>
+            </div>
+            <ul class="d-flex justify-content-between">
+              <li>
+                <div class="fs-8 fw-bold text-primary-900">
+                  目前咖啡因
+                </div>
+                <div class="fs-5 fw-bold text-primary ">
+                  0 mg
+                </div>
+              </li>
+              <li>
+                <div class="fs-8 fw-bold text-primary-900">
+                  今日飲品統計
+                </div>
+                <div class="fs-5 fw-bold text-primary ">
+                  0 杯
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="pb-6">
+        <div class="h-48px d-flex justify-content-between align-items-center">
+          <h2 class="fs-4 fw-bold">最近飲品</h2>
+          <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
+            <span class="fs-7">更多</span>
+            <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
+          </a>
+        </div>
+      </section>
     </div>
     
     

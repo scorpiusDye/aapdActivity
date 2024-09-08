@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   
     // 獲取所有的 nav 項目
-    const navItems = document.querySelectorAll('ul.d-flex li');
+    const navItems = document.querySelectorAll('#main-nav ul.d-flex li');
   
     // 遍歷每個 nav 項目，切換圖片和 nav-title 樣式
     navItems.forEach(navItem => {
