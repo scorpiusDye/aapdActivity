@@ -281,7 +281,8 @@ $teals: (
   "teal-600": $teal-600,
   "teal-700": $teal-700,
   "teal-800": $teal-800,
-  "teal-900": $teal-900
+  "teal-900": $teal-900,
+  "teal-950": #0f2421,//$teal-900
 ) !default;
 
 $cyans: (
@@ -413,7 +414,7 @@ $spacers: (
   1: $spacer * .25,  //4px
   2: $spacer * .5,   //8px
   3: $spacer * .625,  //10px
-  4: $spacer * 1.33, //12px
+  4: $spacer * .75,   //12px
   5: $spacer,        //16px
   6: $spacer * 1.25, //20px
   7: $spacer * 1.5,  //24px
@@ -551,7 +552,8 @@ $border-color-translucent:    rgba($black, .175) !default;
 
 // scss-docs-start border-radius-variables
 $border-radius:               1rem;  //16px //.375rem !default;
-$border-radius-sm:            .5rem; //8px  //.25rem !default;
+$border-radius-xs:            .25rem; //4px
+$border-radius-sm:            .5rem;  //8px  //.25rem !default;
 $border-radius-lg:            .75rem; //12px //.5rem !default;
 $border-radius-xl:            1.25rem; //20px //1rem !default;
 $border-radius-xxl:           1.5rem;  //24px //2rem !default;
@@ -609,8 +611,8 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "PingFang TC", "SF Pro", "Microsoft JhengHei", sans-serif;//system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       "PingFang TC", "SF Pro", "Microsoft JhengHei", sans-serif;//SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:      "PingFang TC", "Microsoft JhengHei", sans-serif;//system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       "SF Pro", "Microsoft JhengHei", sans-serif;//SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;

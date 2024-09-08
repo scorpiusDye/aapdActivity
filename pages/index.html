@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首頁</title>
   </head>
-  <body class="max-w-767 mx-auto">
+  <body class="max-w-767 mx-auto bg-f6">
     <%- include('./layout/header'); -%>
-    <div class="px-6 h-100vh">
+    <div class="px-6 h-100vh overflow-x-hidden">
       <section class="py-7">
         <h1 class="fs-1 mb-7">今日</h1>
         <div class="today-card bg-secondary-100 p-5 rounded-2 border border-secondary-400 d-flex">
@@ -19,8 +19,8 @@
             <div class="">
               <span class="fs-8 fw-bold text-primary-900">今日累積攝取</span>
               <div class="fw-bold text-primary">
-                <span class="fs-3">0 / </span>
-                <span class="fs-5">400 mg</span>
+                <span class="fs-3 font-family-code">0 / </span>
+                <span class="fs-5 font-family-code">400 mg</span>
               </div>
             </div>
             <ul class="d-flex justify-content-between">
@@ -28,7 +28,7 @@
                 <div class="fs-8 fw-bold text-primary-900">
                   目前咖啡因
                 </div>
-                <div class="fs-5 fw-bold text-primary ">
+                <div class="fs-5 fw-bold text-primary font-family-code">
                   0 mg
                 </div>
               </li>
@@ -36,7 +36,7 @@
                 <div class="fs-8 fw-bold text-primary-900">
                   今日飲品統計
                 </div>
-                <div class="fs-5 fw-bold text-primary ">
+                <div class="fs-5 fw-bold text-primary font-family-code">
                   0 杯
                 </div>
               </li>
@@ -44,14 +44,470 @@
           </div>
         </div>
       </section>
-      <section class="pb-6">
-        <div class="h-48px d-flex justify-content-between align-items-center">
+      <section class="pb-6 mx-adjust">
+        <div class="h-48px d-flex justify-content-between align-items-center px-adjust">
           <h2 class="fs-4 fw-bold">最近飲品</h2>
           <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
             <span class="fs-7">更多</span>
             <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
           </a>
         </div>
+        <ul class="d-flex scroll-x-blk vw-100">
+          <li class="ps-6 me-5">
+            <a href="" title="星巴克-卡布奇諾" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 py-3 px-5 d-flex align-items-center">
+                <img src="../assets/images/type/cappuccino.svg" alt="cappuccino" class="drink-item">
+                <div class="ms-2">
+                  <ul class="d-flex">
+                    <li class="w-16px h-16px">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                    </li>
+                    <li class="w-16px h-16px">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                    </li>
+                    <li class="w-16px h-16px">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                    </li>
+                  </ul>
+                  <span class="fs-7 fw-bold text-white font-family-code">
+                    301 mg
+                  </span>
+                </div>
+              </div>
+              <div class="mt-2">
+                <div class="w-22px h-22px rounded-pill overflow-hidden mb-1">
+                  <img src="../assets/images/logo/starbucks.png" alt="starbucks" class="img-fluid">
+                </div>
+                <div class="fs-8 text-primary">
+                  星巴克
+                </div>
+                <div class="fs-4 text-primary-900 fw-bold">
+                  美式咖啡
+                </div>
+                <ul class="d-flex">
+                  <li class="me-1">
+                    <span class="px-1 bg-secondary-50 text-gray-600 fs-9 rounded-xs">
+                      大杯
+                    </span>
+                  </li>
+                  <li>
+                    <span class="px-1 bg-secondary-50 text-gray-600 fs-9 rounded-xs">
+                      全糖
+                    </span>
+                  </li>
+                </ul>
+              </div> 
+            </a>
+          </li>
+          <li class="me-5">
+            <a href="" title="星巴克-焦糖星冰樂" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 py-3 px-5 d-flex align-items-center">
+                <img src="../assets/images/type/frappuccino.svg" alt="frappuccino" class="drink-item">
+                <div class="ms-2">
+                  <ul class="d-flex">
+                    <li class="w-16px h-16px d-block">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                    </li>
+                    <li class="w-16px h-16px d-block">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid d-none">
+                    </li>
+                    <li class="w-16px h-16px d-block">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid d-none">
+                    </li>
+                  </ul>
+                  <span class="fs-7 fw-bold text-white font-family-code ">
+                    130 mg
+                  </span>
+                </div>
+              </div>
+              <div class="mt-2">
+                <div class="w-22px h-22px rounded-pill overflow-hidden mb-1">
+                  <img src="../assets/images/logo/starbucks.png" alt="starbucks" class="img-fluid">
+                </div>
+                <div class="fs-8 text-primary">
+                  星巴克
+                </div>
+                <div class="fs-4 text-primary-900 fw-bold">
+                  焦糖星冰樂
+                </div>
+                <ul class="d-flex">
+                  <li class="me-1">
+                    <span class="px-1 bg-secondary-50 text-gray-600 fs-9 rounded-xs">
+                      大杯
+                    </span>
+                  </li>
+                  <li>
+                    <span class="px-1 bg-secondary-50 text-gray-600 fs-9 rounded-xs">
+                      全糖
+                    </span>
+                  </li>
+                </ul>
+              </div> 
+            </a>
+          </li>
+          <li class="me-5">
+            <a href="" title="星巴克-美式咖啡" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 py-3 px-5 d-flex align-items-center">
+                <img src="../assets/images/type/to-go.svg" alt="frappuccino" class="drink-item">
+                <div class="ms-2">
+                  <ul class="d-flex">
+                    <li class="w-16px h-16px d-block">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                    </li>
+                    <li class="w-16px h-16px d-block">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                    </li>
+                    <li class="w-16px h-16px d-block">
+                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                    </li>
+                  </ul>
+                  <span class="fs-7 fw-bold text-white font-family-code ">
+                    130 mg
+                  </span>
+                </div>
+              </div>
+              <div class="mt-2">
+                <div class="w-22px h-22px rounded-pill overflow-hidden mb-1">
+                  <img src="../assets/images/logo/starbucks.png" alt="starbucks" class="img-fluid">
+                </div>
+                <div class="fs-8 text-primary">
+                  星巴克
+                </div>
+                <div class="fs-4 text-primary-900 fw-bold">
+                  美式咖啡
+                </div>
+                <ul class="d-flex">
+                  <li class="me-1">
+                    <span class="px-1 bg-secondary-50 text-gray-600 fs-9 rounded-xs">
+                      大杯
+                    </span>
+                  </li>
+                  <li>
+                    <span class="px-1 bg-secondary-50 text-gray-600 fs-9 rounded-xs">
+                      全糖
+                    </span>
+                  </li>
+                </ul>
+              </div> 
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="pb-7 mx-adjust">
+        <div class="h-48px d-flex justify-content-between align-items-center px-adjust">
+          <h2 class="fs-4 fw-bold">我的飲品</h2>
+          <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
+            <span class="fs-7">更多</span>
+            <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
+          </a>
+        </div>
+        <ul class="d-flex scroll-x-blk vw-100">
+          <li class="ps-6 me-5">
+            <a href="" title="萬波珍珠奶茶" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/bubble-Tea.svg" alt="bubble-Tea.svg" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <!-- <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li> -->
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                萬波珍珠奶茶
+              </div>
+            </a>
+          </li>
+          <li class="me-5">
+            <a href="" title="蜂蜜美式" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/ice-Coffee.svg" alt="ice-Coffee" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                蜂蜜美式
+              </div>
+            </a>
+          </li>
+          <li class="me-5">
+            <a href="" title="拿鐵" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/latte.svg" alt="latte" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <!-- <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li> -->
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                拿鐵
+              </div>
+            </a>
+          </li> 
+        </ul>
+      </section>
+      <div class="border-top border-gray-200"></div>
+      <section class="mx-adjust pb-9">
+        <div class="h-48px d-flex align-items-center my-2 px-adjust">
+          <h2 class="fs-4 fw-bold">品牌</h2>
+        </div>
+        <ul class="d-flex scroll-x-blk vw-100">
+          <li class="ps-8">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/starbucks.png" alt="starbucks" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/711.png" alt="711" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/FM.png" alt="FM" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/louisa.png" alt="louisa" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/Cama.png" alt="Cama" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/milkshop.png" alt="milkshop" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/chunshui.png" alt="chunshui" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/wootea.png" alt="wootea" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/oolong.png" alt="oolong" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/chinshin.png" alt="chinshin" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/50.png" alt="50" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/macu.png" alt="macu" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/m.png" alt="m" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/cola.png" alt="cola" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          <li class="ps-2">
+            <div class="w-44px h-44px overflow-hidden d-flex justify-content-center align-items-center ">
+              <img src="../assets/images/logo/n.png" alt="n" class="w-40px h-40px rounded-pill ">
+            </div>
+          </li>
+          
+        </ul>
+      </section>
+      <div class="border-top border-gray-200"></div>
+      <section class="pt-6 pb-7 mx-adjust">
+        <div class="h-48px d-flex justify-content-between align-items-center px-adjust">
+          <h2 class="fs-4 fw-bold">星巴克</h2>
+          <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
+            <span class="fs-7">更多</span>
+            <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
+          </a>
+        </div>
+        <ul class="d-flex scroll-x-blk vw-100">
+          <li class="ps-6 me-5">
+            <a href="" title="美式咖啡" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/americano.svg" alt="americano.svg" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                美式咖啡
+              </div>
+            </a>
+          </li>
+          <li class="me-5">
+            <a href="" title="拿鐵" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/latte.svg" alt="latte" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <!-- <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li> -->
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                拿鐵
+              </div>
+            </a>
+          </li> 
+          <li class="me-5">
+            <a href="" title="卡布奇諾" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/cappuccino.svg" alt="cappuccino" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <!-- <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li> -->
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                卡布奇諾
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="pt-6 pb-10 mx-adjust">
+        <div class="h-48px d-flex justify-content-between align-items-center px-adjust">
+          <h2 class="fs-4 fw-bold">7-11</h2>
+          <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
+            <span class="fs-7">更多</span>
+            <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
+          </a>
+        </div>
+        <ul class="d-flex scroll-x-blk vw-100">
+          <li class="ps-6 me-5">
+            <a href="" title="美式咖啡" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/to-go.svg" alt="to-go.svg" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                美式咖啡
+              </div>
+            </a>
+          </li>
+          <li class="me-5">
+            <a href="" title="拿鐵" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/to-go.svg" alt="to-go" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <!-- <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li> -->
+                  <!-- <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li> -->
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                拿鐵
+              </div>
+            </a>
+          </li> 
+          <li class="me-5">
+            <a href="" title="卡布奇諾" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
+              <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
+                <img src="../assets/images/type/to-go.svg" alt="to-go" class="drink-item">
+                <ul class="d-flex">
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <!-- <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li>
+                  <li class="w-16px h-16px">
+                    <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
+                  </li> -->
+                </ul>
+              </div>
+              <div class="deco-line my-3 mx-auto"></div>
+              <div class="fs-4 text-primary-900 fw-bold text-center">
+                卡布奇諾
+              </div>
+            </a>
+          </li>
+        </ul>
       </section>
     </div>
     

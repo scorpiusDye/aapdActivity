@@ -28,6 +28,8 @@ body {
 }
 ol, ul {
 	list-style: none;
+	margin: 0;
+    padding: 0;
 }
 blockquote, q {
 	quotes: none;
@@ -48,11 +50,35 @@ table {
 .h-100vh{
 	height: 100vh;
 }
+.w-16px{
+	width: 16px;
+}
+.h-16px{
+	height: 16px;
+}
+.w-22px{
+	width: 22px;
+}
+.h-22px{
+	height: 22px;
+}
 .w-24px{
 	width: 24px;
 }
 .h-24px{
 	height: 24px;
+}
+.w-40px{
+	width: 40px;
+}
+.h-40px{
+	height: 40px;
+}
+.w-44px{
+	width: 44px;
+}
+.h-44px{
+	height: 44px;
 }
 .h-48px{
 	height: 48px;
@@ -69,6 +95,21 @@ table {
 .h-120px{
 	height: 120px;
 }
+.w-128px{
+	width: 128px;
+} 
+.h-128px{
+	height: 128px;
+}
+.rounded-xs{
+	border-radius: $border-radius-xs;
+}
+.bg-f6{
+	background-color: #F6F6F6;
+}
+.bg-secondary-50{
+	background-color: #f9f6ed;
+}
 .bg-secondary-100{
 	background-color: $orange-100;
 }
@@ -78,6 +119,37 @@ table {
 .border-gray-200{
 	border-color: $gray-200 !important;
 }
+.border-half{
+	border-width: 0.5px !important;
+}
 .text-primary-900{
  color: $teal-900;
+}
+.text-primary-950{
+ color: #0f2421;
+}
+.text-gray-600{
+	color: $gray-600;
+}
+.drinks-card{
+	.drink-item{
+		width: 51px;
+		height: 67pxa;
+	}
+}
+.scroll-x-blk{
+	overflow-y: hidden;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.white-space-nowrap {
+	white-space: nowrap;
+  }
+.mx-adjust{
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.px-adjust{
+	padding-left: 20px;
+	padding-right: 20px;
 }
