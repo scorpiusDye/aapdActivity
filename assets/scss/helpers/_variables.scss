@@ -1519,7 +1519,7 @@ $modal-dialog-margin-y-sm-up:       1.75rem !default;
 $modal-title-line-height:           $line-height-base !default;
 
 $modal-content-color:               null !default;
-$modal-content-bg:                  var(--#{$prefix}body-bg) !default;
+$modal-content-bg:                  #ffffff00;//custom //var(--#{$prefix}body-bg) !default; //lianne 改過 modal-content
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
