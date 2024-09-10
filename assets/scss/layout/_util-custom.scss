@@ -74,6 +74,18 @@ table {
 .h-24px{
 	height: 24px;
 }
+.w-32px{
+	width: 32px;
+}
+.h-32px{
+	height: 32px;
+}
+.w-35px{
+	width: 35px;
+}
+.h-35px{
+	height: 35px;
+}
 .w-40px{
 	width: 40px;
 }
@@ -125,6 +137,9 @@ table {
 .border-gray-200{
 	border-color: $gray-200 !important;
 }
+.border-gray-400{
+	border-color: $gray-400 !important;
+}
 .border-half{
 	border-width: 0.5px !important;
 }
@@ -134,14 +149,14 @@ table {
 .text-primary-950{
  color: #0f2421;
 }
+.text-gray-50{
+	color: #f6f6f6;
+}
 .text-gray-600{
 	color: $gray-600;
 }
-.drinks-card{
-	.drink-item{
-		width: 51px;
-		height: 67pxa;
-	}
+.text-gray-950{
+	color:#0D0D0D;
 }
 .scroll-x-blk{
 	overflow-y: hidden;
@@ -158,4 +173,23 @@ table {
 .px-adjust{
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+
+//首頁
+.drinks-card{
+	.drink-item{
+		width: 51px;
+		height: 67px;
+	}
+}
+
+
+//record頁
+.daily-count{
+	&.active{
+		border-color: $primary !important;
+		background-color: $primary;
+	}
+	
 }
