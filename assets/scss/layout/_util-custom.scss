@@ -50,6 +50,9 @@ table {
 .h-100vh{
 	height: 100vh;
 }
+.w-10px{
+	width: 10px;
+}
 .w-12px{
 	width: 12px;
 }
@@ -131,6 +134,9 @@ table {
 .bg-secondary-100{
 	background-color: $orange-100;
 }
+.border-primary-800{
+	border-color: $teal-800 !important;
+}
 .border-secondary-400{
 	border-color: $orange-400 !important;
 }
@@ -194,7 +200,17 @@ table {
 	}
 	
 }
-.record-card{
-	background-color: $primary;
-
-}
+.items-primary-bg-change {
+	li {
+	  &:nth-child(odd) {
+		.bg-color-change {
+		  background-color: $primary;
+		}
+	  }
+	  &:nth-child(even) {
+		.bg-color-change {
+		  background-color: $teal-400;
+		}
+	  }
+	}
+  }
