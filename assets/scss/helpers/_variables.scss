@@ -656,7 +656,8 @@ $font-sizes: (
   6: $h6-font-size,
   7: $font-size-base * 0.875,  //Body2-14px
   8: $font-size-base * 0.75,   //Body3-12px
-  9: $font-size-base * 0.6875  //Body4-11px
+  9: $font-size-base * 0.6875,  //Body4-11px
+ 10: $font-size-base * 2        //32px 馬的沒在 guildLine裡突然冒出來ˋˊ
 ) !default;
 // scss-docs-end font-sizes
 
