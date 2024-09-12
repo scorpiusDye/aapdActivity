@@ -4,285 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>search</title>
-    <link href="path/to/bootstrap.min.css" rel="stylesheet">
+    <title>setting</title>
   </head>
-  <body class="max-w-767 mx-auto bg-f6">
+  <body class="max-w-767 mx-auto">
     <%- include('./layout/header'); -%>
-
-    <!-- 我的飲品 -->
     <div class="px-6">
-      <section class="py-7">
-        <h1 class="fs-1 mb-7">搜尋</h1>
-        <!-- search bar -->
-        <div class="input-group mb-3 border border-1 rounded-pill d-flex align-items-center bg-white">
-
-          <!-- search -->
-          <i class="bi bi-search ms-6 me-4 fs-4"></i>
-
-          <!-- placeholder -->
-          <input type="text" class="form-control border-0 px-0" placeholder="搜尋品牌或飲品名稱" aria-label="Recipient's username" aria-describedby="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-
-
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="ture">
-            <div class="modal-dialog position-absolute bottom-0 m-0 w-auto">
-              <div class="modal-content h-100vh rounded-0 border-0 w-100">
-                <!-- search bar -->
-                <div class="input-group mb-3 border border-1 rounded-pill d-flex align-items-center bg-white mx-auto p-4 border-1" style="margin-top: 90px; max-width: 355px;">
-                  <!-- search icon-->
-                  <i class="bi bi-search mx-4 fs-4"></i>
-                  <!-- placeholder -->
-                  <input type="text" class="form-control border-0 px-0" placeholder="搜尋品牌或飲品名稱">
-                  <button type="button" class="btn-close bg-black rounded-circle opacity-100 ms-2" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x fs-6 lh-3 d-inline-flex text-light "></i></button>
-                </div>
-                
-                 <!-- search bar -->
-                <div class="modal-heade border-0">
-                  <div class="position-absolute top-0 w-100 ms-0 p-0"><%- include('./layout/header'); -%></div>
-                  <h6 class="modal-title px-6 text-gray-400 mt-5 mb-6">最近搜尋</h6>
-                </div>
-                <ul class="modal-body px-6 py-0 border-0 w-100">
-                  <li class="d-flex w-auto">
-                    <i class="bi bi-clock fs-5 me-2 pt-4 pb-3 text-gray-400"></i>
-                    <p class="border-bottom d-flex align-items-center w-100 text-gray-600">星巴克</p>
-                  </li>
-                  <li class="d-flex w-auto">
-                    <i class="bi bi-clock fs-5 me-2 pt-4 pb-3 text-gray-400"></i>
-                    <p class="border-bottom d-flex align-items-center w-100 text-gray-600">全家</p>
-                  </li>
-                  <li class="d-flex w-auto">
-                    <i class="bi bi-clock fs-5 me-2 pt-4 pb-3 text-gray-400"></i>
-                    <p class="border-bottom d-flex align-items-center w-100 text-gray-600">路易莎</p>
-                  </li>
-                </ul>
-                <div class="modal-footer p-0 border-0 w-auto">
-                  <img src="../assets/images/keyboard.jpg" alt="" class="img-fluid mt-auto w-100 m-0">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal -->
-          <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="ture">
-            <div class="modal-dialog">
-              <div class="modal-content fixed-bottom w-100">
-                <img src="../assets/images/keyboard.jpg" alt="" class="img-fluid mt-auto w-100">
-              </div>
-            </div>
-          </div> -->
-          
-          <!-- mic -->
-          <button class="btn border-0 m-4" type="button" id="button-addon2"><i class="bi bi-mic-fill fs-5"></i></button>
-        </div> 
-      </section>
+      <h1 class="index-title">search</h1>
+      <div class="container vh-100">
+        <ul class="row">
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+        </ul>
+        <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
+      </div>
     </div>
     
-    <!-- 我的飲品 -->
-    <div class="px-6 overflow-x-hidden">
-      <section class="py-7">
-        <div>
-        <div class="h-48px d-flex justify-content-between">
-          <a href="#" title="我的飲品" class="text-dark text-decoration-none d-flex align-items-center">
-            <h4 class="me-2">
-              我的飲品
-            </h4>
-            <button class="bg-primary border-0 rounded-circle"><img src="../assets/images/icon/plus.png" alt="plus" class="w-12px h-12px"></button>
-            </a>
-            <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
-              <span class="fs-7">更多</span>
-              <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
-            </a>
-          </div>
-          <ul class="d-flex scroll-x-blk vw-100">
-            <li class="me-5">
-              <a href="" title="萬波珍珠奶茶" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
-                  <img src="../assets/images/type/bubble-Tea.svg" alt="bubble-Tea.svg" class="drink-item">
-                  <ul class="d-flex">
-                    <li class="w-16px h-16px">
-                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
-                    </li>
-  
-                  </ul>
-                </div>
-                <div class="deco-line my-3 mx-auto"></div>
-                <div class="fs-4 text-primary-900 fw-bold text-center">
-                  萬波珍珠奶茶
-                </div>
-              </a>
-            </li>
-            <li class="me-5">
-              <a href="" title="蜂蜜美式" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
-                  <img src="../assets/images/type/ice-Coffee.svg" alt="ice-Coffee" class="drink-item">
-                  <ul class="d-flex">
-                    <li class="w-16px h-16px">
-                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
-                    </li>
-                    <li class="w-16px h-16px">
-                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
-                    </li>
-                    <li class="w-16px h-16px">
-                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
-                    </li>
-                  </ul>
-                </div>
-                <div class="deco-line my-3 mx-auto"></div>
-                <div class="fs-4 text-primary-900 fw-bold text-center">
-                  蜂蜜美式
-                </div>
-              </a>
-            </li>
-            <li class="me-5">
-              <a href="" title="拿鐵" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <div class="bg-primary rounded-2 px-3 py-5 w-128px h-128px d-flex flex-column align-items-center justify-content-between">
-                  <img src="../assets/images/type/latte.svg" alt="latte" class="drink-item">
-                  <ul class="d-flex">
-                    <li class="w-16px h-16px">
-                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
-                    </li>
-                    <li class="w-16px h-16px">
-                      <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
-                    </li>
-                  </ul>
-                </div>
-                <div class="deco-line my-3 mx-auto"></div>
-                <div class="fs-4 text-primary-900 fw-bold text-center">
-                  拿鐵
-                </div>
-              </a>
-            </li> 
-          </ul>
-        </div>
-      </section>
-    </div>    
-    <!-- 咖啡 -->
-    <div class="px-6 overflow-x-hidden">
-      <section class="py-7">
-        <div>
-        <div class="h-48px d-flex justify-content-between">
-          <a href="#" title="我的飲品" class="text-dark text-decoration-none d-flex align-items-center">
-          <h4 class="me-2">
-            咖啡
-          </h4>
-          </a>
-          <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
-            <span class="fs-7">更多</span>
-            <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
-          </a>
-        </div>
-        <div class="d-flex scroll-x-blk vw-100">
-          <ul class="d-flex">
-            <li class="me-4">
-              <a href="#" title="starbuck" class="drinks-card h-100 w-100 text-decoration-none bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <!-- brand ✏️ -->
-                <img src="../assets/images/logo/starbucks.png" alt="starbuck" class="drink-item h-auto" style="width: 128px;">
-                <div class="card-body">
-                  <!-- line -->
-                  <div class="deco-line my-3 mx-auto"></div>
-                  <!-- brand ✏️ -->
-                  <h4 class="card-title text-primary-900 fw-bold text-center">星巴克</h4>
-                </div>
-              </a>
-            </li>
-            <li class="me-4">
-              <a href="#" title="louisa" class="drinks-card h-100 w-100 text-decoration-none bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <!-- brand ✏️ -->
-                <img src="../assets/images/logo/louisa.png" alt="starbuck" class="drink-item h-auto" style="width: 128px;">
-                <div class="card-body">
-                  <!-- line -->
-                  <div class="deco-line my-3 mx-auto"></div>
-                  <!-- brand ✏️ -->
-                  <h4 class="card-title text-primary-900 fw-bold text-center">路易莎</h4>
-                </div>
-              </a>
-            </li>
-            <li class="me-4">
-              <a href="#" title="Nespresso" class="drinks-card h-100 w-100 text-decoration-none bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <!-- brand ✏️ -->
-                <img src="../assets/images/logo/n.png" alt="Nespresso" class="drink-item h-auto" style="width: 128px;">
-                <div class="card-body">
-                  <!-- line -->
-                  <div class="deco-line my-3 mx-auto"></div>
-                  <!-- brand ✏️ -->
-                  <h4 class="card-title text-primary-900 fw-bold text-center">Nespresso</h4>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </section>
-    </div>
-    <!-- 手搖 -->
-    <div class="px-6 overflow-x-hidden">
-      <section class="py-7">
-        <div>
-        <div class="h-48px d-flex justify-content-between">
-          <a href="#" title="手搖飲料" class="text-dark text-decoration-none d-flex align-items-center">
-          <h4 class="me-2">
-            手搖
-          </h4>
-          </a>
-          <a href="#" title="更多飲品" class="text-decoration-none d-flex align-items-center">
-            <span class="fs-7">更多</span>
-            <img src="../assets/images/icon/arrow-right-Default.svg" alt="arrow-right" class="w-24px h-24px">
-          </a>
-        </div>
-        <div class="d-flex scroll-x-blk vw-100">
-          <ul class="d-flex">
-            <li class="me-4">
-              <a href="#" title="麻古茶坊" class="drinks-card h-100 w-100 text-decoration-none bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <!-- brand ✏️ -->
-                <img src="../assets/images/logo/macu.png" alt="starbuck" class="drink-item h-auto" style="width: 128px;">
-                <div class="card-body">
-                  <!-- line -->
-                  <div class="deco-line my-3 mx-auto"></div>
-                  <!-- brand ✏️ -->
-                  <h4 class="card-title text-primary-900 fw-bold text-center">麻古茶坊</h4>
-                </div>
-              </a>
-            </li>
-            <li class="me-4">
-              <a href="#" title="50嵐" class="drinks-card h-100 w-100 text-decoration-none bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <!-- brand ✏️ -->
-                <img src="../assets/images/logo/50.png" alt="starbuck" class="drink-item h-auto" style="width: 128px;">
-                <div class="card-body">
-                  <!-- line -->
-                  <div class="deco-line my-3 mx-auto"></div>
-                  <!-- brand ✏️ -->
-                  <h4 class="card-title text-primary-900 fw-bold text-center">50嵐</h4>
-                </div>
-              </a>
-            </li>
-            <li class="me-4">
-              <a href="#" title="得正" class="drinks-card h-100 w-100 text-decoration-none bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-                <!-- brand ✏️ -->
-                <img src="../assets/images/logo/oolong.png" alt="得正" class="drink-item h-auto" style="width: 128px;">
-                <div class="card-body">
-                  <!-- line -->
-                  <div class="deco-line my-3 mx-auto"></div>
-                  <!-- brand ✏️ -->
-                  <h4 class="card-title text-primary-900 fw-bold text-center">得正</h4>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </section>
-    </div>
+    
+
     <%- include('./layout/nav'); -%>
 
-    <script src="path/to/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script>
-      var myModal = document.getElementById('myModal')
-      var myInput = document.getElementById('myInput')
-
-      myModal.addEventListener('shown.bs.modal', function () {
-        myInput.focus()
-      })
-    </script>
     <script type="module" src="../main.js"></script>
+    <script>
+      // nav 判斷
+document.addEventListener('DOMContentLoaded', function () {
+    // 定義當前頁面的對應 id，這裡假設首頁為 "today"
+    const currentPage = 'search';  // 根據頁面設置，例如 'record' 對應紀錄頁
+  
+    // 獲取所有的 nav 項目
+    const navItems = document.querySelectorAll('ul.d-flex li');
+  
+    // 遍歷每個 nav 項目，切換圖片和 nav-title 樣式
+    navItems.forEach(navItem => {
+      const navTitle = navItem.querySelector('.nav-title');
+      const defaultImg = navItem.querySelector('.default-img');
+      const activeImg = navItem.querySelector('.active-img');
+  
+      const isActive = navTitle.dataset.nav === currentPage;
+  
+      // 切換圖片
+      toggleNavItem(defaultImg, activeImg, isActive);
+  
+      // 切換 nav-title 樣式
+      toggleNavTitle(navTitle, isActive);
+    });
+  });
+  
+  // 封裝一個簡單的函數來切換圖片
+  function toggleNavItem(defaultImg, activeImg, isActive) {
+    if (isActive) {
+      defaultImg.classList.add('d-none');
+      activeImg.classList.remove('d-none');
+    } else {
+      defaultImg.classList.remove('d-none');
+      activeImg.classList.add('d-none');
+    }
+  }
+  
+  // 封裝一個函數來切換 nav-title 樣式
+  function toggleNavTitle(navTitle, isActive) {
+    if (isActive) {
+      navTitle.classList.remove('default');
+      navTitle.classList.add('active');
+    } else {
+      navTitle.classList.remove('active');
+      navTitle.classList.add('default');
+    }
+  }
+    </script>
+
   </body>
 </html>
