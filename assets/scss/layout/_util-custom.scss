@@ -65,6 +65,12 @@ table {
 .h-16px{
 	height: 16px;
 }
+.w-20px{
+	width: 20px;
+}
+.h-20px{
+	height: 20px;
+}
 .w-22px{
 	width: 22px;
 }
@@ -127,6 +133,9 @@ table {
 }
 .bg-f6{
 	background-color: #F6F6F6;
+}
+.bg-primary-50{
+	background-color: #F3FAF7;
 }
 .bg-secondary-50{
 	background-color: #f9f6ed;
@@ -198,19 +207,45 @@ table {
 		border-color: $primary !important;
 		background-color: $primary;
 	}
-	
 }
 .items-primary-bg-change {
 	li {
-	  &:nth-child(odd) {
+		&:nth-child(odd) {
 		.bg-color-change {
-		  background-color: $primary;
+			background-color: $primary;
 		}
-	  }
-	  &:nth-child(even) {
+		}
+		&:nth-child(even) {
 		.bg-color-change {
-		  background-color: $teal-400;
+			background-color: $teal-400;
 		}
-	  }
+		}
+	}
+}
+
+  .record-card{
+	&.lock{
+		&:before,&:after{
+			content: "";
+			position: absolute;
+		}
+		&:before{	
+			width: 100%;
+			height: 100%;
+			background-color: rgba(#000000, .5);			
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+		&:after{
+			width:24px ;
+			height: 24px;
+			background-image: url('/assets/images/icon/locked.svg');
+			background-repeat: no-repeat; // 防止圖片重複
+			z-index: 2;
+			right: 8px;
+			top: 8px;
+			
+		}
 	}
   }
