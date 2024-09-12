@@ -163,7 +163,7 @@ $teal-400: #509e88;//tint-color($teal, 20%) !default;
 $teal-500: $teal !default;
 $teal-600: shade-color($teal, 20%) !default;
 $teal-700: shade-color($teal, 40%) !default;
-$teal-800: shade-color($teal, 60%) !default;
+$teal-800: #244b42;//shade-color($teal, 60%) !default;
 $teal-900: #223f38;//shade-color($teal, 80%) !default;
 
 $cyan-100: tint-color($cyan, 80%) !default;
@@ -658,7 +658,9 @@ $font-sizes: (
   6: $h6-font-size,
   7: $font-size-base * 0.875,  //Body2-14px
   8: $font-size-base * 0.75,   //Body3-12px
-  9: $font-size-base * 0.6875  //Body4-11px
+  9: $font-size-base * 0.6875,  //Body4-11px
+  10: $font-size-base * 2        //32px 馬的沒在 guildLine裡突然冒出來ˋˊ
+ 
 ) !default;
 // scss-docs-end font-sizes
 
