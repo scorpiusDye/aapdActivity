@@ -4,21 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>setting</title>
+    <title>設定</title>
   </head>
-  <body class="max-w-767 mx-auto">
+  <body class="max-w-767 mx-auto bg-f6">
     <%- include('./layout/header'); -%>
-    <div class="px-6">
-      <h1 class="index-title">search</h1>
-      <div class="container vh-100">
-        <ul class="row">
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
-          <li class="col-6 col-xl-3 bg-primary">1231231</li>
+    <div class="px-6 overflow-x-hidden">
+      <section class="py-7">
+        <h1 class="fs-1 mb-7">設定</h1>
+        <a href="#" title="飲察" class="text-decoration-none d-flex bg-white rounded-3 p-5">
+          <img src="../assets/images/main-logo.png" alt="飲察logo" class="w-60px">
+          <div class="ms-3 w-100">
+            <span class="fs-3 fw-bold text-gray-950 mb-2">SipSense｜飲察</span>
+            <div class="d-flex align-items-center w-100">
+              <img src="../assets/images/icon/Bookmark-Mar-Default.svg" alt="w-20px">
+              <span class="ms-1 me-auto">免費會員</span>
+              <img src="../assets/images/icon/arrow-right-s-primary.svg" alt="w-12px">
+            </div>
+          </div>
+        </a>
+      </section>
+      <section class="pb-7">
+          <h2 class="fs-7 text-gray-400 mb-1">功能</h2>
+          <ul class="bg-white rounded-3">
+              <li class="border-bottom border-gray-200 border-half">
+                <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                  <img src="../assets/images/setting/setting-01.png" alt="setting-01" class="w-30px">
+                  <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">我的個人檔案</span>
+                  <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+                </a>
+              </li>
+              <li class="border-bottom border-gray-200 border-half">
+                <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                  <img src="../assets/images/setting/setting-02.png" alt="setting-02" class="w-30px">
+                  <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">推播通知</span>
+                  <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+                </a>
+              </li>
+              <li class="">
+                <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                  <img src="../assets/images/setting/setting-03.png" alt="setting-03" class="w-30px">
+                  <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">Apple watch 錶盤</span>
+                  <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+                </a>
+              </li>
+          </ul>
+      </section>
+      <section class="pb-7">
+        <h2 class="fs-7 text-gray-400 mb-1">個性化</h2>
+        <ul class="bg-white rounded-3">
+            <li class="border-bottom border-gray-200 border-half">
+              <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                <img src="../assets/images/setting/setting-04.png" alt="setting-04" class="w-30px">
+                <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">使用者介面</span>
+                <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+              </a>
+            </li>
+            <li class="border-bottom border-gray-200 border-half">
+              <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                <img src="../assets/images/setting/setting-05.png" alt="setting-05" class="w-30px">
+                <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">小元件樣式</span>
+                <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+              </a>
+            </li>
+            <li class="">
+              <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                <img src="../assets/images/setting/setting-06.png" alt="setting-06" class="w-30px">
+                <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">時區設定</span>
+                <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+              </a>
+            </li>
         </ul>
-        <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
-      </div>
+      </section>
+      <section class="pb-7">
+        <h2 class="fs-7 text-gray-400 mb-1">資料</h2>
+        <ul class="bg-white rounded-3">
+            <li class="border-bottom border-gray-200 border-half">
+              <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                <img src="../assets/images/setting/setting-07.png" alt="setting-07" class="w-30px">
+                <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">iCloud 資料同步</span>
+                <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+              </a>
+            </li>
+            <li class="">
+              <a href="#" title="link" class="py-2 px-5 d-flex align-items-center text-decoration-none">
+                <img src="../assets/images/setting/setting-08.png" alt="setting-08" class="w-30px">
+                <span class="text-gray-950 fs-6 ms-4 pe-5 me-auto">健康資料同步</span>
+                <img src="../assets/images/icon/arrow-right-s-gray-200.svg" alt="w-12px" class="">
+              </a>
+            </li>
+        </ul>
+      </section>
+      <section class="pb-7">
+        <a href="#" title="link" class="py-4 px-5 d-flex justify-content-center text-decoration-none bg-white rounded-3">
+          <span class="text-danger fs-6 fw-bold">登出</span>
+        </a>
+      </section>
     </div>
     
     
@@ -26,53 +106,5 @@
     <%- include('./layout/nav'); -%>
 
     <script type="module" src="../main.js"></script>
-    <script>
-      // nav 判斷
-document.addEventListener('DOMContentLoaded', function () {
-    // 定義當前頁面的對應 id，這裡假設首頁為 "today"
-    const currentPage = 'search';  // 根據頁面設置，例如 'record' 對應紀錄頁
-  
-    // 獲取所有的 nav 項目
-    const navItems = document.querySelectorAll('ul.d-flex li');
-  
-    // 遍歷每個 nav 項目，切換圖片和 nav-title 樣式
-    navItems.forEach(navItem => {
-      const navTitle = navItem.querySelector('.nav-title');
-      const defaultImg = navItem.querySelector('.default-img');
-      const activeImg = navItem.querySelector('.active-img');
-  
-      const isActive = navTitle.dataset.nav === currentPage;
-  
-      // 切換圖片
-      toggleNavItem(defaultImg, activeImg, isActive);
-  
-      // 切換 nav-title 樣式
-      toggleNavTitle(navTitle, isActive);
-    });
-  });
-  
-  // 封裝一個簡單的函數來切換圖片
-  function toggleNavItem(defaultImg, activeImg, isActive) {
-    if (isActive) {
-      defaultImg.classList.add('d-none');
-      activeImg.classList.remove('d-none');
-    } else {
-      defaultImg.classList.remove('d-none');
-      activeImg.classList.add('d-none');
-    }
-  }
-  
-  // 封裝一個函數來切換 nav-title 樣式
-  function toggleNavTitle(navTitle, isActive) {
-    if (isActive) {
-      navTitle.classList.remove('default');
-      navTitle.classList.add('active');
-    } else {
-      navTitle.classList.remove('active');
-      navTitle.classList.add('default');
-    }
-  }
-    </script>
-
   </body>
 </html>
