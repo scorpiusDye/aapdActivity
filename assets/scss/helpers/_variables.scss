@@ -127,12 +127,12 @@ $red-800: shade-color($red, 60%) !default;
 $red-900: shade-color($red, 80%) !default;
 
 $orange-100: #F2E8CF; //tint-color($orange, 80%) !default;
-$orange-200: tint-color($orange, 60%) !default;
-$orange-300: tint-color($orange, 40%) !default;
+$orange-200: #E6D0A2;//tint-color($orange, 60%) !default;
+$orange-300: #D8B06C;//tint-color($orange, 40%) !default;
 $orange-400: #ca9341; //tint-color($orange, 20%) !default;
 $orange-500: $orange !default;
 $orange-600: shade-color($orange, 20%) !default;
-$orange-700: shade-color($orange, 40%) !default;
+$orange-700: #814A27;//shade-color($orange, 40%) !default;
 $orange-800: shade-color($orange, 60%) !default;
 $orange-900: shade-color($orange, 80%) !default;
 
@@ -157,7 +157,7 @@ $green-800: shade-color($green, 60%) !default;
 $green-900: shade-color($green, 80%) !default;
 
 $teal-100: #d8efe6;//tint-color($teal, 80%) !default;
-$teal-200: tint-color($teal, 60%) !default;
+$teal-200: #B0DFCF;//tint-color($teal, 60%) !default;
 $teal-300: tint-color($teal, 40%) !default;
 $teal-400: #509e88;//tint-color($teal, 20%) !default;
 $teal-500: $teal !default;
@@ -425,6 +425,8 @@ $spacers: (
   9: $spacer * 2,    //32px
   10: $spacer * 2.25, //36px
   11: $spacer * 2.5, //40px
+  14: $spacer * 3.375, //54px
+  24: $spacer * 5.875, //94px
 ) !default;
 // scss-docs-end spacer-variables-maps
 

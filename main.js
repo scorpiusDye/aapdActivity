@@ -1,9 +1,9 @@
 import './assets/scss/all.scss';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 
-
-//nav切換偵測
+//----nav切換偵測開始
 document.addEventListener('DOMContentLoaded', function () {
     // 根據不同頁面設置 currentPage 值
     // 可以在各自頁面上設置這個變量，例如在 index.html 是 'today'
@@ -60,4 +60,16 @@ document.addEventListener('DOMContentLoaded', function () {
       navTitle.classList.add('default');
     }
   }
-  
+//----nav切換偵測結束
+
+
+// offcanvas 打開後觸發 body 內的 animation
+document.getElementById('offcanvasRight-coffee').addEventListener('shown.bs.offcanvas', function () {
+  // 當 offcanvas 被打開時，啟動動畫
+  document.querySelector('.chart').classList.add('animate');
+});
+
+document.getElementById('offcanvasRight-coffee').addEventListener('hidden.bs.offcanvas', function () {
+  // 當 offcanvas 被關閉時，移除動畫 class (以便下次打開時重新觸發動畫)
+  document.querySelector('.chart').classList.remove('animate');
+});

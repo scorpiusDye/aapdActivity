@@ -95,7 +95,7 @@
           <h2 class="text-dark fs-6 fw-bold mb-2">摘要項目</h2>
           <ul class="items-primary-bg-change">
             <li class="mb-6">
-              <a href="record-caffeine.html" title="咖啡因" class="bg-color-change d-block w-100 py-4 px-5 rounded-1 d-flex align-items-start justify-content-between border border-primary-800 text-decoration-none">
+              <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-coffee" aria-controls="offcanvasRight" class="bg-color-change d-block w-100 py-4 px-5 rounded-1 d-flex align-items-start justify-content-between border border-primary-800 text-decoration-none">
                 <div>
                   <div class="d-flex align-items-center mb-4">
                     <img src="../assets/images/icon/bean-2-Default.svg" alt="bean-2-Default" class="svg-brightness-100 w-20px h-20px">
@@ -110,7 +110,7 @@
                   <span class="ms-2 fs-7 text-white me-2">最後紀錄 15:11</span>
                   <img src="../assets/images/icon/arrow-right-s.svg" alt="arrow-right-s" class="w-10px">
                 </div>
-              </a>
+              </button>
             </li>
             <li class="mb-6">
               <a href="record-sleep.html" title="睡眠" class="bg-color-change d-block w-100 record-card py-4 px-5 rounded-1 d-flex align-items-start justify-content-between border border-primary-800 text-decoration-none">
@@ -208,6 +208,184 @@
         </section>
       </section>
     </div>
+
+    <!-- 咖啡因-日 -->
+    <div class="offcanvas offcanvas-end pt-14 pb-24 border-0" tabindex="-1" id="offcanvasRight-coffee" aria-labelledby="offcanvasRightLabel">
+      <div class="bg-f6 w-100 px-6">
+        <button type="button" class="bg-transparent border-0 position-sticky px-0" data-bs-dismiss="offcanvas" aria-label="Close">
+          <img src="../assets/images/icon/arrow-left-Default.svg" alt="" class="w-24px">
+        </button>
+      </div>
+      <div class="offcanvas-body content-coffee-day bg-f6 overflow-x-hidden p-6">
+            <section class="pb-7 d-flex justify-content-between align-items-center mb-6">
+              <h1 class="fs-1">咖啡因</h1>
+              <div>
+                <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-secondary w-105px h-40px bg-secondary-300 text-secondary-700 rounded-1 px-2 d-flex align-items-center border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="me-auto fw-bold w-100 text-center">今日</span>
+                    <img src="../assets/images/icon/arrow-down-s-secondary.svg" alt="" class="w-10px vertical-align-middle">
+                  </button>
+                <!-- Modal 下拉選單內容暫略 -->
+                  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            今日  
+                          </h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+              </div>
+            </section>
+            <section class="pb-6 mx-adjust">
+              <ul class="d-flex scroll-x-blk vw-100">
+                <li class="ps-6 me-4">
+                  <div class=" d-flex flex-column align-items-center justify-content-center w-48px h-55px border border-primary-200 rounded-1 fw-bold">
+                    <p class="fs-8 text-gray-300">週日</p>
+                    <span class="text-gray-300 fs-4 font-family-code fw-bold">7</span>
+                  </div>
+                </li>
+                <li class="me-4">
+                  <div class=" d-flex flex-column align-items-center justify-content-center w-48px h-55px border border-primary-800 rounded-1 fw-bold bg-primary">
+                    <p class="fs-8 text-white">週一</p>
+                    <span class="text-white fs-4 font-family-code fw-bold">8</span>
+                  </div>
+                </li>
+                <li class="me-4">
+                  <div class=" d-flex flex-column align-items-center justify-content-center w-48px h-55px border border-primary-200 rounded-1 fw-bold">
+                    <p class="fs-8 text-gray-300">週二</p>
+                    <span class="text-gray-300 fs-4 font-family-code fw-bold">9</span>
+                  </div>
+                </li>
+                <li class="me-4">
+                  <div class=" d-flex flex-column align-items-center justify-content-center w-48px h-55px border border-primary-200 rounded-1 fw-bold">
+                    <p class="fs-8 text-gray-300">週三</p>
+                    <span class="text-gray-300 fs-4 font-family-code fw-bold">10</span>
+                  </div>
+                </li>
+                <li class="me-4">
+                  <div class=" d-flex flex-column align-items-center justify-content-center w-48px h-55px border border-primary-200 rounded-1 fw-bold">
+                    <p class="fs-8 text-gray-300">週四</p>
+                    <span class="text-gray-300 fs-4 font-family-code fw-bold">11</span>
+                  </div>
+                </li>
+                <li class="me-4">
+                  <div class=" d-flex flex-column align-items-center justify-content-center w-48px h-55px border border-primary-200 rounded-1 fw-bold">
+                    <p class="fs-8 text-gray-300">週五</p>
+                    <span class="text-gray-300 fs-4 font-family-code fw-bold">12</span>
+                  </div>
+                </li>
+                <li class="me-4">
+                  <div class=" d-flex flex-column align-items-center justify-content-center w-48px h-55px border border-primary-200 rounded-1 fw-bold">
+                    <p class="fs-8 text-gray-300">週六</p>
+                    <span class="text-gray-300 fs-4 font-family-code fw-bold">13</span>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <div class="fs-5 text-black text-center fw-bold mb-6">8月8日, 週一</div>
+              <div class="d-flex flex-column align-items-center">
+                <!-- Begin Your Code -->
+                <section class="chart-container">
+                  <figure class="chart" data-percent="94">
+                  <h2 class="d-flex flex-column align-items-center justify-content-center">
+                    <img src="../assets/images/icon/bean-2-Default.svg" alt="咖啡豆" class="w-36px">
+                    <div class="number fs-1 fw-bold text-dark font-family-code">94%</div>   
+                  </h2>
+                  <svg width="135" height="135">
+                    <circle class="outer" cx="67.5" cy="67.5" r="60.4" transform="rotate(-90, 67.5, 67.5)"/>
+                  </svg>
+                  </figure>
+                </section>
+                <!-- End Your Code -->
+                 <div class="text-gray-400 fs-9 text-center mt-4">
+                  <div>
+                    每日建議攝取
+                  </div>
+                  <div>
+                    375/400mg
+                  </div>
+                 </div>
+              </div>
+            </section>
+            <section class="pb-6">
+                <h2 class="fs-6 fw-bold text-dark mb-2">咖啡因代謝</h2>
+                <div class="today-card bg-secondary-100 p-4 rounded-1 border border-secondary-400 d-flex">
+                  <img src="../assets/images/page/coffee-sheet-1.png" alt="咖啡因代謝" class="img-fluid">
+                </div>
+            </section>
+            <section class="pb-6">
+              <h2 class="fs-6 fw-bold text-dark mb-2">咖啡因攝取</h2>
+              <div class="today-card bg-secondary-100 p-4 rounded-1 border border-secondary-400 d-flex flex-column">
+                <div class="fs-9 text-gray-600">
+                  總計 
+                </div>
+                <div class="fs-8 fw-bold font-family-code text-primary mb-1">
+                  375 mg
+                </div>
+                <img src="../assets/images/page/coffee-sheet-2.png" alt="咖啡因攝取" class="img-fluid">
+              </div>
+            </section>
+            <section class="pb-6">
+              <h2 class="fs-6 fw-bold text-dark mb-2">本日飲品紀錄</h2>
+              <div class="today-card bg-secondary-100 rounded-1 border border-secondary-400 d-flex flex-column">
+                <ul class="d-flex flex-column align-items-between">
+                  <li class="py-1 border-bottom border-gray-200">
+                    <div class="w-100 d-flex align-items-center  py-1 px-4">
+                      <div class="w-32px h-32px bg-primary rounded-1 d-flex justify-content-center align-items-center">
+                        <img src="../assets/images/type/frappuccino.svg" alt="frappuccino" class="w-22px">
+                      </div>
+                      <div class="ms-2 ">
+                        <div class="fs-7 text-gray-950">焦糖星冰樂</div>
+                        <div class="fs-9 text-gray-600">12:10</div>
+                      </div>
+                      <div class="fs-7 text-primary fw-bold font-family-code ms-auto">130 mg</div>
+                    </div>
+                  </li>
+                  <li class="py-1 border-bottom border-gray-200">
+                    <div class="w-100 d-flex align-items-center  py-1 px-4">
+                      <div class="w-32px h-32px bg-primary rounded-1 d-flex justify-content-center align-items-center">
+                        <img src="../assets/images/type/cappuccino.svg" alt="cappuccino" class="w-22px">
+                      </div>
+                      <div class="ms-2 ">
+                        <div class="fs-7 text-gray-950">卡布其諾</div>
+                        <div class="fs-9 text-gray-600">14:11</div>
+                      </div>
+                      <div class="fs-7 text-primary fw-bold font-family-code ms-auto">195 mg</div>
+                    </div>
+                  </li>
+                  <li class="py-1">
+                    <div class="w-100 d-flex align-items-center  py-1 px-4">
+                      <div class="w-32px h-32px bg-primary rounded-1 d-flex justify-content-center align-items-center">
+                        <img src="../assets/images/type/hand-Shaken.svg" alt="hand-Shaken" class="w-22px">
+                      </div>
+                      <div class="ms-2 ">
+                        <div class="fs-7 text-gray-950">紅茶</div>
+                        <div class="fs-9 text-gray-600">15:50</div>
+                      </div>
+                      <div class="fs-7 text-primary fw-bold font-family-code ms-auto">50 mg</div>
+                    </div>
+                  </li>
+                </ul>
+              
+            </section>
+          </div>
+          <script type="module" src="../main.js"></script>
+        
+      </div>
+    </div>
+
     
     
 
