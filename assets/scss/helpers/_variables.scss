@@ -319,9 +319,19 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
+  "gray-100":   $gray-100,
   "gray-400":   $gray-400,
   "gray-600":   $gray-600,
+  "gray-800":   $gray-800,
+  "gray-900":   $gray-900,
+  "teal":       $teal,
+  "teal-100":   $teal-100,
+  "teal-200":   $teal-200,
   "teal-900":   $teal-900,
+  "orange-100": $orange-100,
+  "orange-300": $orange-300,
+  "orange-400": $orange-400,
+  "orange-700": $orange-700,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1584,7 +1594,7 @@ $alert-color-scale:             40% !default; // Deprecated in v5.2.0, to be rem
 // scss-docs-start progress-variables
 $progress-height:                   1rem !default;
 $progress-font-size:                $font-size-base * .75 !default;
-$progress-bg:                       var(--#{$prefix}secondary-bg) !default;
+$progress-bg:                       #ffffff00; //custom //var(--#{$prefix}secondary-bg) !default;
 $progress-border-radius:            var(--#{$prefix}border-radius) !default;
 $progress-box-shadow:               var(--#{$prefix}box-shadow-inset) !default;
 $progress-bar-color:                $white !default;

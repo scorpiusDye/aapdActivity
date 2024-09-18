@@ -1,0 +1,22 @@
+.progress-circle-container {
+    position: relative;
+}
+
+.progress-circle {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%; /* 圓形外框 */
+    background:conic-gradient($teal calc(var(--progress) * 1%), $teal-100 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-inner-circle {
+    position: absolute;
+    width: 52px; /* 內部圓形的大小 */
+    height: 52px;
+    border-radius: 50%;
+    background-color: $orange-100; /* 內部圓形的顏色 */
+}

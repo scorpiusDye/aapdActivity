@@ -152,6 +152,9 @@ table {
 .max-w-105px{
 	max-width: 105px;
 }
+.max-w-336px{
+	max-width: 336px;
+}
 .rounded-xs{
 	border-radius: $border-radius-xs;
 }
@@ -226,4 +229,10 @@ table {
 }
 .svg-brightness-100{
 	filter: grayscale(1) brightness(100);
+}
+.position-sticky{
+    z-index: 1060;
+}
+.dropdown-menu{
+	min-width: 105px; 
 }

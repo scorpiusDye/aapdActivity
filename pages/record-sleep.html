@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>record-sleep</title>
+    <link href="path/to/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="max-w-767 mx-auto bg-f6">
+    <%- include('./layout/header'); -%>
+
+    <div class="px-6">
+        <a href="record.html" title="返回搜尋頁" class="text-decoration-none d-flex align-items-center pb-6">
+            <img src="../assets/images/icon/arrow-left-Default.svg" alt="arrow-right" class="w-24px h-24px">
+        </a>
+        
+        <div class="d-flex mb-6">
+            <h1>睡眠</h1>
+            <div class="dropdown w-105px h-40px ms-auto">
+                <button class="btn btn-secondary text-orange-700 bg-orange-300 border-0 rounded-1 dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  週
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">今日</a></li>
+                  <li><a class="dropdown-item" href="#">週</a></li>
+                  <li><a class="dropdown-item" href="#">月</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="pb-6">
+            <div class="bg-orange-100 border-orange-400 p-5 rounded-1 border d-flex align-items-center">
+                <!-- sleep chart -->
+                <div class="text-center">
+                    <p class="fs-8 mb-1">睡眠品質</p>
+                    <div class="progress-circle-container d-flex justify-content-center align-items-center position-relative">
+                        <div class="progress-circle" style="--progress: 75;" data-progress="75">
+                            <div class="progress-inner-circle"> <p class="pt-5 px-3 fw-bold">75%</p> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sleep infor -->
+                <div class="ms-auto me-6">
+                    <p class="fs-8">平均入睡時間</p>
+                    <p class="fs-7 fw-bold mb-2">凌晨 00:21</p>
+                    <p class="fs-8">平均睡眠時數</p>
+                    <p class="fs-7 fw-bold">7 小時 2 分</p>
+                </div>
+                <div>
+                    <p class="fs-8">平均入睡時間</p>
+                    <p class="fs-7 fw-bold mb-2">凌晨 00:21</p>
+                    <p class="fs-8">平均睡眠時數</p>
+                    <p class="fs-7 fw-bold">7 小時 2 分</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-dark fs-6 fw-bold mb-2">本週</h2>
+            <div class="bg-orange-100 border-orange-400 py-5 px-4 rounded-1 border">
+                <ul class="d-flex align-items-stretch w-100">
+                    <li>
+                        <p class="fs-8 fw-bold mb-5">週一</p>
+                        <p class="fs-8 fw-bold mb-5">週一</p>
+                        <p class="fs-8 fw-bold mb-5">週一</p>
+                        <p class="fs-8 fw-bold mb-5">週一</p>
+                        <p class="fs-8 fw-bold mb-5">週一</p>
+                        <p class="fs-8 fw-bold mb-5">週一</p>
+                        <p class="fs-8 fw-bold">週一</p>
+                    </li>
+                    <div class="border border-gray-800 mx-2"></div>
+                     <!-- 右側顯示進度條的列表項 -->
+                    <li class="flex-grow-1">
+                        <div class="progress w-100 rounded-0 mb-5">
+                            <div class="progress-bar rounded-0 rounded-end" role="progressbar" style="width: 89%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress w-100 rounded-0 mb-6">
+                            <div class="progress-bar rounded-0 rounded-end" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress w-100 rounded-0 mb-5">
+                            <div class="progress-bar rounded-0 rounded-end" role="progressbar" style="width: 78%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress w-100 rounded-0 mb-5">
+                            <div class="progress-bar rounded-0 rounded-end" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress w-100 rounded-0 mb-5">
+                            <div class="progress-bar rounded-0 rounded-end" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress w-100 rounded-0 mb-5">
+                            <div class="progress-bar rounded-0 rounded-end" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress w-100 rounded-0">
+                            <div class="progress-bar rounded-0 rounded-end" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        
+                    </li>
+                    <li style="margin-top: -2px;">
+                        <p class="fs-7 fw-bold text-primary mb-4">89%</p>
+                        <p class="fs-7 fw-bold text-primary mb-5">89%</p>
+                        <p class="fs-7 fw-bold text-primary mb-4">89%</p>
+                        <p class="fs-7 fw-bold text-primary mb-4">89%</p>
+                        <p class="fs-7 fw-bold text-primary mb-5">89%</p>
+                        <p class="fs-7 fw-bold text-primary mb-4">89%</p>
+                        <p class="fs-7 fw-bold text-primary">89%</p>
+                    </li>
+                </ul>
+                <div class="d-flex mt-5">
+                    <p class="fs-7 fw-bold">與上週比較</p>
+                    <div class="ms-auto d-flex align-items-center">
+                        <div class="triangle-up me-2"></div>
+                        <p class="text-gray-300 fs-9"> 21% </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <%- include('./layout/nav'); -%>
+
+    <script src="path/to/bootstrap.bundle.min.js"></script>
+    <script>
+      var myModal = document.getElementById('myModal')
+      var myInput = document.getElementById('myInput')
+
+      myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+      })
+      var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+          return new bootstrap.Dropdown(dropdownToggleEl)
+        })
+    </script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
