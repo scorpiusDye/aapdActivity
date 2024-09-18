@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>首頁</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body class="max-w-767 mx-auto bg-f6">
     <%- include('./layout/header'); -%>
     <div class="px-6 overflow-x-hidden">
       <section class="py-7">
-        <h1 class="fs-1 mb-7">今日</h1>
+        <h1 class="fs-1 mb-7 font-size-lg">今日</h1>
         <div class="today-card bg-secondary-100 p-5 rounded-2 border border-secondary-400 d-flex">
           <div class="w-120px h-120px bg-primary rounded-4">
             <img src="../assets/images/count/count-0.svg" alt="">
@@ -18,9 +25,9 @@
           <div class="py-1 pe-1 ms-5 w-100 d-flex flex-column justify-content-between">
             <div class="">
               <span class="fs-8 fw-bold text-primary-900">今日累積攝取</span>
-              <div class="fw-bold text-primary">
-                <span class="fs-3 font-family-code">0 / </span>
-                <span class="fs-5 font-family-code">400 mg</span>
+              <div class="font-family-code fw-bold text-primary">
+                <span class="fs-3 font-family-code fw-bold">0 / </span>
+                <span class="fs-5 font-family-code fw-bold">400 mg</span>
               </div>
             </div>
             <ul class="d-flex justify-content-between">
@@ -55,7 +62,7 @@
         <ul class="d-flex scroll-x-blk vw-100">
           <li class="ps-6 me-5">
             <a href="" title="星巴克-卡布奇諾" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-              <div class="bg-primary rounded-2 py-3 px-5 d-flex align-items-center">
+              <div class="bg-primary rounded-2 py-3 px-2 d-flex align-items-center">
                 <img src="../assets/images/type/cappuccino.svg" alt="cappuccino" class="drink-item">
                 <div class="ms-2">
                   <ul class="d-flex">
@@ -69,7 +76,7 @@
                       <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
                     </li>
                   </ul>
-                  <span class="fs-7 fw-bold text-white font-family-code">
+                  <span class="fs-7 fw-bold text-white font-family-code white-space-nowrap">
                     301 mg
                   </span>
                 </div>
@@ -81,7 +88,7 @@
                 <div class="fs-8 text-primary">
                   星巴克
                 </div>
-                <div class="fs-4 text-primary-900 fw-bold">
+                <div class="fs-4 text-primary-950 fw-bold">
                   美式咖啡
                 </div>
                 <ul class="d-flex">
@@ -101,7 +108,7 @@
           </li>
           <li class="me-5">
             <a href="" title="星巴克-焦糖星冰樂" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-              <div class="bg-primary rounded-2 py-3 px-5 d-flex align-items-center">
+              <div class="bg-primary rounded-2 py-3 px-2 d-flex align-items-center">
                 <img src="../assets/images/type/frappuccino.svg" alt="frappuccino" class="drink-item">
                 <div class="ms-2">
                   <ul class="d-flex">
@@ -115,7 +122,7 @@
                       <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid d-none">
                     </li>
                   </ul>
-                  <span class="fs-7 fw-bold text-white font-family-code ">
+                  <span class="fs-7 fw-bold text-white font-family-code white-space-nowrap ">
                     130 mg
                   </span>
                 </div>
@@ -127,7 +134,7 @@
                 <div class="fs-8 text-primary">
                   星巴克
                 </div>
-                <div class="fs-4 text-primary-900 fw-bold">
+                <div class="fs-4 text-primary-950 fw-bold">
                   焦糖星冰樂
                 </div>
                 <ul class="d-flex">
@@ -147,7 +154,7 @@
           </li>
           <li class="me-5">
             <a href="" title="星巴克-美式咖啡" class="text-decoration-none drinks-card bg-secondary-100 p-4 rounded-2 border border-secondary-400 border-half d-inline-block">
-              <div class="bg-primary rounded-2 py-3 px-5 d-flex align-items-center">
+              <div class="bg-primary rounded-2 py-3 px-2 d-flex align-items-center">
                 <img src="../assets/images/type/to-go.svg" alt="frappuccino" class="drink-item">
                 <div class="ms-2">
                   <ul class="d-flex">
@@ -161,7 +168,7 @@
                       <img src="../assets/images/icon/bean-white-fill.svg" alt="bean-white-fill" class="img-fluid">
                     </li>
                   </ul>
-                  <span class="fs-7 fw-bold text-white font-family-code ">
+                  <span class="fs-7 fw-bold text-white font-family-code white-space-nowrap ">
                     130 mg
                   </span>
                 </div>
@@ -173,7 +180,7 @@
                 <div class="fs-8 text-primary">
                   星巴克
                 </div>
-                <div class="fs-4 text-primary-900 fw-bold">
+                <div class="fs-4 text-primary-950 fw-bold">
                   美式咖啡
                 </div>
                 <ul class="d-flex">
@@ -219,7 +226,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 萬波珍珠奶茶
               </div>
             </a>
@@ -241,7 +248,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 蜂蜜美式
               </div>
             </a>
@@ -263,7 +270,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 拿鐵
               </div>
             </a>
@@ -381,7 +388,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 美式咖啡
               </div>
             </a>
@@ -403,7 +410,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 拿鐵
               </div>
             </a>
@@ -425,7 +432,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 卡布奇諾
               </div>
             </a>
@@ -458,7 +465,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 美式咖啡
               </div>
             </a>
@@ -480,7 +487,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 拿鐵
               </div>
             </a>
@@ -502,7 +509,7 @@
                 </ul>
               </div>
               <div class="deco-line my-3 mx-auto"></div>
-              <div class="fs-4 text-primary-900 fw-bold text-center">
+              <div class="fs-4 text-primary-950 fw-bold text-center">
                 卡布奇諾
               </div>
             </a>
