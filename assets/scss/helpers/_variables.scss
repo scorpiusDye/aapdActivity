@@ -313,6 +313,7 @@ $dark:          $gray-900 !default;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
+  "green":      $green,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -449,6 +450,7 @@ $spacers: (
 $position-values: (
   0: 0,
   50: 50%,
+  80: 80%,
   100: 100%
 ) !default;
 // scss-docs-end position-map
