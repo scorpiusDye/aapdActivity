@@ -66,6 +66,9 @@ table {
 .w-16px{
 	width: 16px;
 }
+.h-10px{
+	height: 10px;
+}
 .h-16px{
 	height: 16px;
 }
@@ -147,8 +150,17 @@ table {
 .w-128px{
 	width: 128px;
 } 
+.w-90{
+	width: 90%;
+}
 .h-128px{
 	height: 128px;
+}
+.top-140px{
+	top: 140px;
+}
+.bottom-108px{
+	bottom: 108px;
 }
 .z-1060{
 	z-index: 1060px;
@@ -249,4 +261,7 @@ table {
 }
 .text-align-strat{
 	text-align: left;
+}
+.addDrink{
+	padding: 2.5px 9px;
 }
