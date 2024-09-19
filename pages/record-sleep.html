@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>record-sleep</title>
     <link href="path/to/bootstrap.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body class="max-w-767 mx-auto bg-f6">
     <%- include('./layout/header'); -%>
@@ -14,11 +21,10 @@
         <a href="record.html" title="返回搜尋頁" class="text-decoration-none d-flex align-items-center pb-6">
             <img src="../assets/images/icon/arrow-left-Default.svg" alt="arrow-right" class="w-24px h-24px">
         </a>
-        
-        <div class="d-flex mb-6">
-            <h1>睡眠</h1>
-            <div class="dropdown w-105px h-40px ms-auto">
-                <button class="btn btn-secondary text-orange-700 bg-orange-300 border-0 rounded-1 dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="d-flex align-items-center mb-6">
+            <h1 class="fs-1">睡眠</h1>
+            <div class="dropdown w-105px h-100 ms-auto">
+                <button class="btn btn-secondary text-orange-700 bg-orange-300 border-0 rounded-1 dropdown-toggle w-100 h-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   週
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -28,12 +34,11 @@
                 </ul>
             </div>
         </div>
-
         <section class="pb-6">
             <div class="bg-orange-100 border-orange-400 p-5 rounded-1 border d-flex align-items-center">
                 <!-- sleep chart -->
                 <div class="text-center">
-                    <p class="fs-8 mb-1">睡眠品質</p>
+                    <p class="fs-6 mb-2 fw-bold text-dark">睡眠品質</p>
                     <div class="progress-circle-container d-flex justify-content-center align-items-center position-relative">
                         <div class="progress-circle" style="--progress: 75;" data-progress="75">
                             <div class="progress-inner-circle"> <p class="pt-5 px-3 fw-bold">75%</p> </div>
@@ -55,7 +60,6 @@
                 </div>
             </div>
         </section>
-
         <section class="mb-6">
             <h2 class="text-dark fs-6 fw-bold mb-2">本週</h2>
             <div class="bg-orange-100 border-orange-400 py-5 px-4 rounded-1 border">
@@ -114,7 +118,129 @@
                 </div>
             </div>
         </section>
-        
+        <section class="mb-6">
+            <p class="text-dark fs-6 fw-bold mb-2">睡眠階段</p>
+            <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                    <img src="../assets/images/icon/locked.svg" alt="lock">
+                </div>
+                <div class="mt-auto pt-5 text-align-strat">
+                    <p class="fs-8">--</p>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-question-circle-fill"></i>
+                        <p class="fs-8">未知</p>
+                    </div>
+                </div>
+            </button>
+        </section>
+        <section class="mb-6">
+            <p class="text-dark fs-6 fw-bold mb-2">睡眠時心率</p>
+            <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                    <img src="../assets/images/icon/locked.svg" alt="lock">
+                </div>
+                <div class="mt-auto pt-5 text-align-strat">
+                    <p class="fs-8">--</p>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-question-circle-fill"></i>
+                        <p class="fs-8">未知</p>
+                    </div>
+                </div>
+            </button>
+        </section>
+
+        <div class="row row-cols-2 g-2">
+            <section class="col mb-6">
+                <p class="text-dark fs-6 fw-bold mb-2">睡眠中醒來總時間</p>
+                <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                    <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                        <img src="../assets/images/icon/locked.svg" alt="lock">
+                    </div>
+                    <div class="mt-auto pt-5 text-align-strat">
+                        <p class="fs-8">--</p>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill"></i>
+                            <p class="fs-8">未知</p>
+                        </div>
+                    </div>
+                </button>
+            </section>
+            <section class="col mb-6">
+                <p class="text-dark fs-6 fw-bold mb-2">快速動眼睡眠總時間</p>
+                <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                    <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                        <img src="../assets/images/icon/locked.svg" alt="lock">
+                    </div>
+                    <div class="mt-auto pt-5 text-align-strat">
+                        <p class="fs-8">--</p>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill"></i>
+                            <p class="fs-8">未知</p>
+                        </div>
+                    </div>
+                </button>
+            </section>
+            <section class="col mb-6 mt-0">
+                <p class="text-dark fs-6 fw-bold mb-2">淺睡次數</p>
+                <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                    <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                        <img src="../assets/images/icon/locked.svg" alt="lock">
+                    </div>
+                    <div class="mt-auto pt-5 text-align-strat">
+                        <p class="fs-8">--</p>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill"></i>
+                            <p class="fs-8">未知</p>
+                        </div>
+                    </div>
+                </button>
+            </section>
+            <section class="col mb-6 mt-0">
+                <p class="text-dark fs-6 fw-bold mb-2">淺睡總時間</p>
+                <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                    <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                        <img src="../assets/images/icon/locked.svg" alt="lock">
+                    </div>
+                    <div class="mt-auto pt-5 text-align-strat">
+                        <p class="fs-8">--</p>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill"></i>
+                            <p class="fs-8">未知</p>
+                        </div>
+                    </div>
+                </button>
+            </section>
+            <section class="col mb-6 mt-0">
+                <p class="text-dark fs-6 fw-bold mb-2">深睡次數</p>
+                <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                    <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                        <img src="../assets/images/icon/locked.svg" alt="lock">
+                    </div>
+                    <div class="mt-auto pt-5 text-align-strat">
+                        <p class="fs-8">--</p>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill"></i>
+                            <p class="fs-8">未知</p>
+                        </div>
+                    </div>
+                </button>
+            </section>
+            <section class="col mb-6 mt-0">
+                <p class="text-dark fs-6 fw-bold mb-2">深睡總時間</p>
+                <button class="sleep-lock opacity-75 py-4 px-4 rounded-1 border w-100 d-flex position-relative">
+                    <div class="ms-auto position-absolute end-0 top-0" style="transform: scale(0.5);">
+                        <img src="../assets/images/icon/locked.svg" alt="lock">
+                    </div>
+                    <div class="mt-auto pt-5 text-align-strat">
+                        <p class="fs-8">--</p>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-question-circle-fill"></i>
+                            <p class="fs-8">未知</p>
+                        </div>
+                    </div>
+                </button>
+            </section>
+        </div>
     </div>
     
     <%- include('./layout/nav'); -%>
