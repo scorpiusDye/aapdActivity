@@ -1,6 +1,7 @@
 import './assets/scss/all.scss';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+//lianne 終於找到這個干擾到 collapse...
+//我先註解掉，請黛確認其他頁面是否能正常跑
+//import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 //----nav切換偵測開始
