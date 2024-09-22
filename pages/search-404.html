@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>search</title>
-    <link href="path/to/bootstrap.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
@@ -13,6 +12,8 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body class="max-w-767 mx-auto bg-f6">
     <%- include('./layout/header'); -%>
@@ -35,9 +36,8 @@
           <button class="btn border-0 m-4" type="button" id="button-addon2"><i class="bi bi-mic-fill fs-5"></i></button>
         </div> 
 
-        <!-- Button trigger modal -->
         <div class="h-100vh">
-        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <div class="card h-100 bg-secondary-100">
                 <div class="card-body bg-primary rounded-2 m-4">
                   <div class="text-center mx-auto">
@@ -57,26 +57,97 @@
                 </div>
               </div>
         </button>
-        
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog position-absolute bottom-0 left-0 m-0 w-100">
-                <div class="modal-content">
+                <div class="modal-content rounded-0 rounded-top-4">
                   <button type="button" class="btn-close position-absolute p-4" data-bs-dismiss="modal" aria-label="Close" style="left: 90%;"></button>
                   <div class="modal-header border-0">
                     <h4 class="modal-title mx-auto mt-15 mb-9" id="exampleModalLabel"> 新增飲品 </h4>
                   </div>
-                  <div class="bg-primary w-128px h-128px text-center mx-auto d-flex align-items-center justify-content-center rounded-3">
+
+
+                  <!-- <div class="bg-primary w-128px h-128px text-center mx-auto d-flex align-items-center justify-content-center rounded-3">
                     <p class="text-white">選擇圖示</p>
-                  </div>
+                  </div> -->
+                  
+                <!-- 按钮 -->
+                <button class="bg-primary w-128px h-128px text-center mx-auto d-flex align-items-center justify-content-center rounded-3 border-0 position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <p class="text-white">選擇圖示</p>
+                </button>
+                
+                <!-- 折叠的内容 -->
+                <div class="collapse position-absolute top-50 start-50  translate-middle mt-100px z-1 d-flex" id="collapseExample">
+                    <div class="card card-body w-336px h-336px mx-auto border-0 shadow-lg bg-f6">
+                    <ul class="row row-cols-4 g-4">
+                        <div class="col">
+                        <img src="../assets/images/type/espresso.svg" class="w-60px h-auo" alt="espresso">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/americano.svg" class="w-60px h-auo" alt="americano">
+                            </div>
+                        <div class="col">
+                            <img src="../assets/images/type/latte.svg" class="w-60px h-auo" alt="latte">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/tea.svg" class="w-60px h-auo" alt="tea">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/cappuccino.svg" class="w-60px h-auo" alt="cappuccino">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/mocha.svg" class="w-60px h-auo" alt="coke">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/coke.svg" class="w-60px h-auo" alt="tea">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/ice-Coffee.svg" class="w-60px h-auo" alt="ice-Coffee">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/bubble-Tea.svg" class="w-60px h-auo" alt="bubble-Tea">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/frappuccino.svg" class="w-60px h-auo" alt="frappuccino">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/hand-Shaken.svg" class="w-60px h-auo" alt="hand-Shaken">
+                        </div>
+                        <div class="col">
+                            <img src="../assets/images/type/to-go.svg" class="w-60px h-auo" alt="to-go">
+                        </div>
+                    </ul>
+                    </div>
+                </div>
+
                   <div class="modal-body px-9">
-                    <div class="d-flex align-items-center py-6">
-                      <img src="../assets/images/icon/kcal.svg" alt="kcal-svg" class="me-1">
-                      <p>熱量</p>
-                      <div class="ms-auto">
-                        <p><span class="fw-bold me-1">190</span>大卡</p>
-                      </div>
+                    <!-- 飲品名稱 input -->
+                    <div class="input-group py-6 rounded-0 border-0 d-flex">
+                        <span class="input-group-text bg-transparent border-0 ps-0" id="basic-addon2">
+                            <img src="../assets/images/icon/drink.svg" alt="drink-svg" class="me-1">
+                            <p>飲品名稱</p>
+                        </span>
+                        <input type="text" class="form-control bg-transparent ms-auto border-0 text-end pe-0" placeholder="請輸入飲品名稱" aria-label="請輸入飲品名稱" aria-describedby="請輸入飲品名稱">
+                    </div>
+                    <hr class="m-0"> 
+                    <!-- 熱量 input-->
+                    <div class="input-group py-6 rounded-0 border-0 d-flex">
+                        <span class="input-group-text bg-transparent border-0 ps-0" id="basic-addon2">
+                            <img src="../assets/images/icon/kcal.svg" alt="kcal-svg" class="me-1">
+                            <p>熱量(大卡)</p>
+                        </span>
+                        <input type="text" class="form-control bg-transparent ms-auto border-0 text-end pe-0" placeholder="請輸入熱量" aria-label="請輸入熱量" aria-describedby="請輸入熱量">
+                    </div>
+                    <hr class="m-0"> 
+                    <!-- 請輸入咖啡因 input-->
+                    <div class="input-group py-6 rounded-0 border-0 d-flex align-items-center">
+                        <span class="input-group-text bg-transparent border-0 ps-0" id="basic-addon2">
+                            <img src="../assets/images/icon/bean-1-Default.svg" alt="bean-1-Default" class="me-1 svg-gray">
+                            <p>咖啡因含量 (mg)</p>
+                            <img src="../assets/images/icon/info-Fill.svg" alt="info-Fill" class="ms-2 svg-gray">
+                        </span>
+                        <input type="text" class="form-control bg-transparent ms-auto border-0 text-end pe-0" placeholder="請輸入咖啡因" aria-label="請輸入咖啡因" aria-describedby="請輸入咖啡因">
                     </div>
                     <hr class="m-0">
                     <div class="d-flex align-items-center py-6">
@@ -111,51 +182,9 @@
                       </ul>
                     </div>
                     <hr class="m-0">
-                    <div class="row row-cols-4 g-2 my-7">
-                      <div class="col">
-                        <button type="button" class="card h-100" disabled="">
-                          <div class="card-body text-center px-4">
-                            <h6 class="fw-bold mb-1">S</h6>
-                            <p class="fs-7">240 ml</p>
-                          </div>
-                        </button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="card h-100">
-                          <div class="card-body text-center px-4">
-                            <h6 class="fw-bold mb-1">M</h6>
-                            <p class="fs-7">360 ml</p>
-                          </div>
-                        </button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="card h-100 bg-teal-200 border-teal border-1">
-                          <div class="card-body text-center px-4">
-                            <h6 class="fw-bold mb-1">L</h6>
-                            <p class="fs-7">480 ml</p>
-                          </div>
-                        </button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="card h-100">
-                          <div class="card-body text-center px-4">
-                            <h6 class="fw-bold mb-1">XL</h6>
-                            <p class="fs-7">600 ml</p>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                    <hr class="m-0">
                   </div>
                   <div class="border-0 px-9 text-center">
-                    <p class="mb-5">咖啡因 <span class="fs-2 text-primary fw-bold"> 130 </span> mg ∙ 
-                      糖份<span class="fs-2 text-primary fw-bold"> 98 </span> g</p>
-                    <div class="row row-cols-2 pb-7">
-                    <div class="col-2 text-center">
-                      <img src="../assets/images/icon/clock-outline-Default.svg" alt="clock">
-                      <p class="fs-8">現在</p>
-                    </div>
-                    <a href="index-success.html" class="col-10">
+                  <div class="py-7">
                     <button type="button" class="w-100 btn btn-primary fs-6 py-5 rounded-pill">紀錄飲品</button>
                     </a>
                   </div>
@@ -168,18 +197,23 @@
     </div>
     
    
-    <%- include('./layout/nav'); -%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="path/to/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script>
-      var myModal = document.getElementById('myModal')
-      var myInput = document.getElementById('myInput')
+        document.addEventListener('DOMContentLoaded', function () {
+        var collapseElement = document.getElementById('collapseExample');
 
-      myModal.addEventListener('shown.bs.modal', function () {
-        myInput.focus()
-      })
+        // 检查是否存在 'show' 类，如果存在则强制关闭
+        if (collapseElement.classList.contains('show')) {
+            var collapseInstance = new bootstrap.Collapse(collapseElement, {
+            toggle: false  // 确保页面加载时不自动展开
+            });
+            collapseInstance.hide();  // 强制关闭
+        }
+        });
+
     </script>
     <script type="module" src="../main.js"></script>
+
   </body>
 </html>
