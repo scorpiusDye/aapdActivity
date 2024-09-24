@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/aapdActivity/assets/apple-touch-icon-c456dc00.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACYVBMVEXR//9UrZletJlO+rpQnohQnohQnohQnohQnohQnohQnohPnohNnYZPnYdTn4pToIpOnYdYo46Eu6ux1MrJ4drL4tu3186Mv7FeppFysZ/6/Pz////7/Pz6/Pv9/v3X6eR9tqZ2s6Lj8Oz+///V5+KRwLNuq5trqpmIuq3J4Nr8/f3t9fOAt6hLmoRfppLV6OOx0slOmYU6jXdGlH+axbr5/Pvj7+tgpJJLm4SYxrnI39lJloI7jng9j3k8jnhAkXuv0ceozcNDlH5VoYvM49x4saI7jndhpJLw9vXe7OhPmoVKmYNgp5Pl8e7o8e9TnIhCkn1Ek37o8u9WnopElX9kqZbr9PHg7epNmIRCknyly8HK4dubxbpboY5doo9sqppAkHtPnodcpJDe7enu9fNboI6+2tL7/fzm8e6Iu60+kHpDk3262NCNvbFLl4NurJuv0cj1+fj3+vmPvrFFlX9NnIb3+vrh7epgo5GEuKry9/ZoqJdJmYNPnIew0snX6ONyrZ1Dkn08j3mex7yz08tBknxFloC72ND9/v70+feOvrFZn4zr8/Hj7+xSm4hFlH9IlYCSwLTd6+jk7+xUnInO491jpZOnzcOrzsVEk31PmYVyrp5tq5rK4Nr4+/pnp5ZAknxZo47Y6eXx9/Y6jnfs9PJYn4xBk3yx08mCt6hOnYZyr55wrZxfo5GBtqifyL3n8e6Ju64/kHs/kHpKloJ8tKXb6ua21cykysD2+vnA2tO92dLY6eS41s57s6TG3tfv9vTz+PbQ5N5ImIJJl4FHlYBMm4VKmoNGloBFln9Nm4Wp9dGGAAAACnRSTlMAAAAAP7732b32tSe8GAAAAAFiS0dEGwJg1KQAAAAHdElNRQfoCRIPIjU7ngsUAAAByUlEQVQ4y2NgYGFl48IB2FhZGBlY2LnwAHYWBg4uvICDgRO/Ak4GZB43Dy8fP5BAFkNWICAoJCwiKiYuIYBdAa+kqJS0jKy0nLyCADYFAopKyiqqauoamlraOrqYCnj19JUNDI2AwNjE1MzcAkOBgKW0lbWNLRDY2TtIOzrxoitwdtFyNbIFAzd3D08vbzQFvD6+fv52QFn7ABu3QM2g4BB0BaFh4RFABZFR0TGxNnHxCU5oChKTklNSgU4ITEuXzsjMMrLNxvBmjnQuyA15+QWFRcW2tiXoCkoVysorgCrsjLIqq7SrbWowTKitk65vaATa0tTULN3SWoqhoC2ivaPTqivQ1tamu6e3D8ME3v6sCRMnyU2eAvRK4NTCaei+4OKbPmOmzazZc+yBDo2cO2/+AjQF3AsXLa5wszNaAgprw/Cly5ZjWLFCOsYGEtRGKzusZqKHJNeq1R5ha4zsQP5cOyl9nRumN0vXa23YaLhp85at26S3B7YKYCjgrd2xU8tz1+49pul7DW3hKQYpyQl479t/QKvj4CEN4yxvLiwKuLgPH4lb01Bx1NbpGNZEC7Lm+ImQk4dPIQsRzjgEsx7BzMuEP/szAwDP8JHbiYT7LAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNC0wOS0xOFQxNTozNDo1MyswMDowMBPqvMQAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjQtMDktMThUMTU6MzQ6NTMrMDA6MDBitwR4AAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEVQnohQnohQnohQnohPnYdNnIZOnYdPnohprJmPwbORwrRtrpuNwLHT5uG41s621cySwrVwsJ7U5+FxrZ09j3k8j3hnp5bR5N9yr56eyb2rzsU7jng+j3lHlYA8jniWw7dJmYNNnYakzcGgyL05jXZGlH+u0Mex0sloqJZOmYRImIJOnYZ/uKjK4dtQmoY6jndYnouhyb7H3thRm4dKmYNPnIenzcPG3th8s6VAkXs/kHq11MyQv7JKmoNPnodnqZdmp5aEuKpKloI4jHaPvrKqzsSrz8WXw7dHl4Fhp5PM4tySwLRNmIRMl4OJu67P5N5doo9Lm4RtrZvA29PM4dvL4dvD3NZtq5pSnollqJZlp5VPm4b///9Mq8/3AAAAA3RSTlNx6+pSEOf4AAAAAWJLR0Rc6tgAlwAAAAd0SU1FB+gJEg8iNTueCxQAAACpSURBVBjTY2BgZEYCjAwMTGAGCysrG5jBxACm2Dk4ubghaiACPLx8/LwCLDABNkEhYRFRMXEJVqgAq6SUtIysnLy8AlRAUUlZRVVNXUNTCyqgraOrp29gaGRsAjPU1MzcwtLK2sYWKmBn7+Bo6OTs4grTwsplLSctJ+fm7gEVYPH08vbx9fMPCISZwRYUHBIaFu6BcKl2RGRUtALE6RDPMbNps0M9h+59ANA/FCGgIGN9AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA5LTE4VDE1OjM0OjUzKzAwOjAwE+q8xAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wOS0xOFQxNTozNDo1MyswMDowMGK3BHgAAABXelRYdFJhdyBwcm9maWxlIHR5cGUgaXB0YwAAeJzj8gwIcVYoKMpPy8xJ5VIAAyMLLmMLEyMTS5MUAxMgRIA0w2QDI7NUIMvY1MjEzMQcxAfLgEigSi4A6hcRdPJCNZUAAAAASUVORK5CYII=">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module" crossorigin src="/aapdActivity/assets/main-02df17fc.js"></script>
+    <link rel="stylesheet" href="/aapdActivity/assets/main-958ee7fc.css">
+  </head>
+  <body class="max-w-767 mx-auto bg-f6">
+    <div class="bg-f6 h-54px position-sticky top-0 d-flex justify-content-between">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ0AAABsCAMAAABHExdxAAAARVBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADZo62CAAAAF3RSTlMAEG+f38+vXyBA7/9/j2C/gHBQkKAwTwRkdQwAAAHNSURBVHgB7MEBAQAABAAg/p82A1QBAAAAAAAAAAAAAAAwSRb5dZbeKgyDYVgCkcj+KTPd/1KPHnMqMB0WIN6O9l2+GEGaVqR7vZX+lIpvW0qhNBn/9fSHDxR00g5moEhGnDqm3ygOdcVQNfwtH9uXlL++z1STWw0dgXA1BphOyUwws7/W3NNFD2C61FgyAtYYAQhTsQLIVGwwqb5OhGDONWSXWDUY5vNrkT2B3N71DoDeaqxMwWqkajC+ALTnaN2r62miqoYkoog1xFebr1SAiYyvhKsaI1O8GjsM+9m4rJSpqvSms4aLODcSHTTD6I/JWopew+8pen302OlOgKyPqJFgykTcX8jXk+KaMkLj1/BZgdwJgEluZ8NHKD2kBo/4slH2uVGP0CV8DTcIYPJMDEM1PUZo/BouNVOT+BgiHRX9+FIfs9NwgJmmSUPXcKufgx5A9gesmxS2hprqxb39cwmGx9UYAXxcbqVybuPzcTVm+HlIMBMVi08QPSUYVeWwNVhg2iUtG/xoGG0GphuNf0/ZM06iVHlcDVKpYjy1hhu6o8XE9CduDV2ttpEoGk4pMT3ev/bgWAAAAABgkL/1JHZWHwAAAAAAAAAAAAKjNR+pSJZ2sAAAAABJRU5ErkJggg==" class="h-100" alt="Status-Bar">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAABsCAMAAACsJKxyAAAAmVBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/A4ehAAAAM3RSTlMABS09TlRZSCFA389fEG+Qn7+AJ/8gLEIcCxEwYO8yQ49wODd/BhZQr6BTSQ0TT2YmMxuaJCFLAAACiklEQVR4AezBAQEAAAQAIOD/ZUNUAQAAAAAAAAAAAAAA8FFWzx419qHcKAxFYfh4g2+QhDBSrtKA9MQlPe//cLti16QqaLLMAN8U9/bbRoU6zHd3UoyYkFKqDEFa5IvCGFPYXOA7e3OKlGiMlmRPB1rkht8ymUPAPtHB4dEMHWbHaUKUYqQcNwS+IAx/VrhAjXmKOL6cnlyOso0REeSo+cYrU3MHaUrghE4nlkOfcVB9jo8u6BIoOMoVrud0M6oIhpmVDudwirfUIl8KIZb5SvJWofHeLt2g4kgC+3SCEVmzZ4M5Ssl/mVy/jWS310uHd4gAyZEWOKQdjIhhrwjmWHFDCXxUSW7keOuaNgDHUtB0O6UcWr05ROiystYuBRp6wX+sPx5JEziOJZv7X99NJofvIcvmzLIdLepCwFvWvMD/57ir7jGofGVMoaNyQFsHAFXNb8kHAHAZ+sjxWF1jQII9G5WjHYA+OtPwesnx+IQBWfZkfI5S8mfS9ZfjeVI51u1QsCqM4n+y/nL8mlQOrd5OPVwl2zGlpxwDjC2lkVItf5QDWr6fkFtfo78cz0Mt4Gv9oxxwq7LJUooS3tLio3YapjmWwQ2d4vppwCVaRI4Qt6794840wohmkBypaHJ4E8xR1uExpZXQDc45ksMenUw1h+WtDEH7dAGsOYr19Q6nmkOrdiEadj2nl8jtH+HjJZhqDmjJ3grfeaJNikgnREdjyaHaBXxsDjjfQ+rODdCLFz1Dh6Ojvd0ht45N+5NwdbtmqdjL3t8eVtYsHTo8JRQpucFgdGXtdl5prc3QWFprxcfbw4Ry6HSUHiTzzhTJZYrPfrcHBwIAAAAAQP6vjaCqqqqqqqqqqqoAn42SokytPYoAAAAASUVORK5CYII=" class="h-100" alt="Status-Bar">
+</div>
+
+    <!-- 我的飲品 -->
+    <div class="px-6">
+      <section class="py-7">
+        <!-- search bar -->
+        <div class="input-group mb-3 border border-1 rounded-pill d-flex align-items-center bg-white">
+
+          <!-- search -->
+          <i class="bi bi-search ms-6 me-4 fs-4"></i>
+            <p>可不可</p>
+          <!-- placeholder -->
+          <input type="text" class="form-control border-0 px-0" aria-label="Recipient's username" aria-describedby="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          
+          <!-- mic -->
+          <button class="btn border-0 m-4" type="button" id="button-addon2"><i class="bi bi-mic-fill fs-5"></i></button>
+        </div> 
+
+        <div class="h-100vh ms-4">
+        <p class="fw-bold mb-2 mt-5">找不到相關飲品，立即新增我的飲品</p>
+        <button type="button" class="btn border-0 p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="card h-100 bg-secondary-100">
+                <div class="card-body bg-primary rounded-2 m-4 h-128px d-flex align-items-center justify-content-center">
+                  <div class="mx-auto">
+                    <img src="/aapdActivity/assets/to-go-b963517f.svg" alt="to-go.svg" class="img-fluid h-100 w-48px">
+                  </div>
+                </div>
+                <!-- line -->
+                <div class="deco-line my-3 mx-auto"></div>
+                <div class="card-footer d-flex align-items-center bg-secondary-100 border-0">
+                  <!-- 飲料名稱 ✏️ -->
+                  <div class="fs-4 text-primary-900 fw-bold text-center me-2">
+                    我的飲品
+                  </div>
+                  <div class="bg-primary rounded-circle addDrink ms-auto">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC/SURBVHgB7dWBCcMgEAXQf50oG9RukJGySbJBO4LdwI2uZ+DA0AiiQQncA6NIwB/UHKEBMzvpYgtE9EFvEmDloxU9yYIzn3Oo8ECdKTPv0DHEpSyEshDKQigLoUgHSTEq8cy866V9UeZY9E6KUS970SMZzNK/Mc4rnokJY7kYwmOssD9lSzYeY4vrp7cjno3Srbnidni5HR61JPCS+bIFFeyPqSyEshDKQqhbh/CZ+YCe+L/obahEaJAUvaZi9APiv3G+9gf4mgAAAABJRU5ErkJggg==" alt="plus" class="w-10px h-10px">
+                  </div>
+                </div>
+              </div>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog position-absolute bottom-0 left-0 m-0 w-100">
+                <div class="modal-content rounded-0 rounded-top-4">
+                  <button type="button" class="btn-close position-absolute p-5" data-bs-dismiss="modal" aria-label="Close" style="left: 85%; top: 2%;"></button>
+                  <div class="modal-header border-0">
+                    <h4 class="modal-title mx-auto mt-15 mb-9" id="exampleModalLabel"> 新增飲品 </h4>
+                  </div>
+
+                  <!-- collapse btn -->
+                  <p>
+                    <a class="btn btn-primary w-128px h-128px text-center mx-auto d-flex align-items-center justify-content-center rounded-3 border-0" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        選擇圖示
+                    </a>
+                  </p>
+                  <!-- collapse -->
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body w-336px h-auto border-0 shadow-lg bg-f6 position-absolute top-50 start-50  translate-middle mt-100px" style="z-index: 1;">
+                        <ul class="row row-cols-4 g-4">
+                            <div class="col">
+                            <img src="/aapdActivity/assets/espresso-524a71b6.svg" class="px-4 py-2" alt="espresso">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/americano-1de5a1d3.svg" class="px-4 py-2" alt="americano">
+                                </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/latte-82c53b5a.svg" class="px-4 py-2" alt="latte">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/tea-830f0f58.svg" class="px-4 py-2" alt="tea">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/cappuccino-0d89dc7a.svg" class="px-4 py-2" alt="cappuccino">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/mocha-04eab53b.svg" class="px-4 py-2" alt="coke">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/coke-29a11316.svg" class="px-4 py-2" alt="tea">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/ice-Coffee-5475c07e.svg" class="px-4 py-2" alt="ice-Coffee">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/bubble-Tea-0f5e1feb.svg" class="px-4 py-2" alt="bubble-Tea">
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/frappuccino-1dd2245e.svg" class="px-4 py-2" alt="frappuccino">
+                            </div>
+                            <div class="col">
+                                <div class="px-4 py-2 bg-gray-200 rounded-2 d-flex align-items-center justify-content-center">
+                                <img src="/aapdActivity/assets/hand-Shaken-25d6543d.svg" alt="hand-Shaken">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <img src="/aapdActivity/assets/to-go-b963517f.svg" class="px-4 py-2" alt="to-go">
+                            </div>
+                        </ul>
+                    </div>
+                  </div>
+                        
+                  <div class="modal-body px-9">
+                    <!-- 飲品名稱 input -->
+                    <div class="input-group py-6 rounded-0 border-0 d-flex">
+                        <span class="input-group-text bg-transparent border-0 ps-0" id="basic-addon2">
+                            <img src="/aapdActivity/assets/drink-9bc09ec8.svg" alt="drink-svg" class="me-1">
+                            <p>飲品名稱</p>
+                        </span>
+                        <input type="text" class="form-control bg-transparent ms-auto border-0 text-end pe-0" placeholder="請輸入飲品名稱" aria-label="請輸入飲品名稱" aria-describedby="請輸入飲品名稱">
+                    </div>
+                    <hr class="m-0"> 
+                    <!-- 熱量 input-->
+                    <div class="input-group py-6 rounded-0 border-0 d-flex">
+                        <span class="input-group-text bg-transparent border-0 ps-0" id="basic-addon2">
+                            <img src="/aapdActivity/assets/kcal-f578eeb9.svg" alt="kcal-svg" class="me-1">
+                            <p>熱量(大卡)</p>
+                        </span>
+                        <input type="text" class="form-control bg-transparent ms-auto border-0 text-end pe-0" placeholder="請輸入熱量" aria-label="請輸入熱量" aria-describedby="請輸入熱量">
+                    </div>
+                    <hr class="m-0"> 
+                    <!-- 請輸入咖啡因 input-->
+                    <div class="input-group py-6 rounded-0 border-0 d-flex align-items-center">
+                        <span class="input-group-text bg-transparent border-0 ps-0" id="basic-addon2">
+                            <img src="/aapdActivity/assets/bean-1-Default-661d336d.svg" alt="bean-1-Default" class="me-1 svg-gray">
+                            <p>咖啡因含量 (mg)</p>
+                            <img src="/aapdActivity/assets/info-Fill-2c3592cb.svg" alt="info-Fill" class="ms-2 svg-gray">
+                        </span>
+                        <input type="text" class="form-control bg-transparent ms-auto border-0 text-end pe-0" placeholder="請輸入咖啡因" aria-label="請輸入咖啡因" aria-describedby="請輸入咖啡因">
+                    </div>
+                    <hr class="m-0">
+                    <div class="d-flex align-items-center py-6">
+                      <img src="/aapdActivity/assets/sugar-4b951e53.svg" alt="sugar-svg" class="me-1">
+                      <p>糖份</p>
+                      <ul class="ms-auto d-flex align-items-center">
+                        <li class="me-1">
+                          <button type="button" class="bg-f6 border rounded-pill py-2 px-5">
+                          <p class="fw-bold text-gray-900 fs-7">-</p>
+                          </button>
+                        </li>
+                        <li class="me-1">
+                          <button type="button" class="bg-f6 border rounded-pill py-2 px-5">
+                          <p class="fw-bold text-gray-900 fs-7">3</p>
+                          </button>
+                        </li>
+                        <li class="me-1">
+                          <button type="button" class="bg-f6 border rounded-pill py-2 px-5">
+                          <p class="fw-bold text-gray-900 fs-7">5</p>
+                          </button>
+                        </li>
+                        <li class="me-1">
+                          <button type="button" class="bg-f6 border rounded-pill py-2 px-5">
+                          <p class="fw-bold text-gray-900 fs-7">7</p>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="bg-gray-900 border rounded-pill py-2 px-5">
+                          <p class="text-white fs-7">全</p>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <hr class="m-0">
+                  </div>
+                  <div class="border-0 px-9 text-center">
+                  <div class="py-7">
+                    <a href="index-success.html">
+                    <button type="button" class="w-100 btn btn-primary fs-6 py-5 rounded-pill">紀錄飲品</button>
+                    </a>
+                  </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+       </div>
+      </section>
+    </div>
+    
+    <nav id="main-nav" class="h-94px bg-white position-sticky bottom-0 border-top border-gray-200 p-4 z-1060 z-1"> <!--  lianne 0916 添加 z-1 -->
+    <ul class="d-flex justify-content-around">
+        <li id="nav-today">
+            <a href="index.html" class="d-flex flex-column align-items-center text-decoration-none">
+                <div class="icon-blk mb-1">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA8CAMAAADhV0xWAAAAQlBMVEVHcEyvr6+wsLCxsbGwsLCwsLCvr6+wsLCwsLCwsLCwsLCvr6+wsLCvr6+vr6+vr6+vr6+vr6+vr6+wsLCwsLCvr698GtGiAAAAFnRSTlMAIG9f/98w73+PnxDPoJCAcGBAr79QZM51dgAAASFJREFUeAHt1MF2wiAQheE7ZABLYscgff9XbWvrHKVKGFw239Jz7r9ACLbsyDnCCyZm9gHDHH+Lw4UD/5qG96MF3asDzN5YDRUS//BxrKB7CiOFedE9QF4L5v1CwE0hoQ/pfgYGCuR13/ipY39sRK376lhbwnX/DowU9E8X/HHUgmFvLEzc2gNyLYSN/QloF2JoPt8V2Cxk674u8PR0L2g61wXddwaOjz8xK9sDnKFQRgIJCsurgZM9UB2j+FhSf0AK+xNq0h9YoVqB7OTC0VCACqtE9gB5vuFnc6DwHbEGiO/F2Rj44ApZAvo6Fvni9ebbA0lP458F9kCRi3N9kZJcLO1Ah0Zg5W4Bj8yRO3k8lrlPJDwreO5QCM9l2eIydpVPf68emLtOjWMAAAAASUVORK5CYII=" class="img-fluid default-img" alt="今日">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA8CAMAAADhV0xWAAAAnFBMVEVHcEwtcWEtcmIucWEucmIvb18ucmIucmEvb18vb18vc18tcGMucmIucmIucmEucmEwcGAtcmIucmEucWEvb18wcmAvcV8vcWEucmIvcWEucWIvcmLz+vfa6eR4pZpglIeRtqxHg3R5pZo7emtUi36dvrbC2NFIg3Xn8u5TjH2Rtq3n8e6qx7+px7/m8u1snJBsnZC2z8mFrqPO4NvNa+vUAAAAG3RSTlMAgGCffyDfvzAQQF/vz8/fX2/vv0BvcHCPgO/y/lXrAAABRUlEQVR42u3XyZKCMBSFYVBBHHHo+dwozvY8vf+7dQPtLQQkuWHZ/PvzLaiEqjhNurzp1KuzHwDwA/v9FHFDa6GDvybWexZs91xHvr8DagltpK02LNjt1beN0BvxnkitWBDvHxVRRmgb7j3evxFZCJ6f2eeEcU+wXxOXFWR77nmLNF9zOYPT/ovIRgiGSIuo0JoFwV4oDMD70p5OQqDZ74iqhWFQeX1fibRCX7PXCphc3EdU2QcL+b0hsCj/xbQgB9DPAF0ZULybo7rAjRAofsb7cDZvmwNuF+Gtk881B1o8qgT2uyhpp6wAtQS3UHJAHZDpcBQDS5wVSQGF8zZHIfCJXEoIvCBu7P7mI24vBvi0dhvgHwLLKOk9f5AWUdJWA+irAFowLigFeg8wLHTK68OsmedcEkIYNOd9GeHqur5qHoL5fgCs8r+/qCEuzAAAAABJRU5ErkJggg==" class="img-fluid active-img d-none" alt="今日">
+                </div>
+                <div class="fs-9 nav-title default" data-nav="today">
+                    今日
+                </div>
+            </a>
+        </li>
+        <li id="nav-record">
+            <a href="record.html" class="d-flex flex-column align-items-center text-decoration-none">
+                <div class="icon-blk mb-1">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAALVBMVEVHcEyvr6+wsLCvr6+wsLCwsLCvr6+vr6+vr6+wsLCvr6+wsLCxsbGvr6+wsLAQ8KVNAAAADnRSTlMAgL9w789AEDBvIN9fYFRgAaEAAAD1SURBVHja7ZbLqoQwDEDbPKxazf9/7gUrzYyxYzpwFwM9qy48EA4REgYvTEs8WKZudSGp5K1LTSBvQOqQQS6A393FgO5M2cqk6TyZBOIBi0n3nIlvA0ByZYrhJHrS7Y3A7El3zcTxAK7pbjtrJhJD1nR3zVEzoZW3GsXMrV1ic8P0kwfZ7rZTLuxZVSqD+mT7P7tly5D/VZ5BeArn64Bnr7ySiNBaXieUnDLW/UepYJccv5NTHTvp2Ks7GNdgXFyYx4aNDRsb9kMyPl9rJT22LwOOTUAvAwOJixzuQJ+8te4wB+C4ABX38bznzyrh49VrqQfG4A83nThTUBtpbgAAAABJRU5ErkJggg==" class="img-fluid default-img" alt="紀錄">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAilBMVEVHcEwtcWEvc18vb18tcWEtcmIucWEucmEucmIucmIvb18wcmAtcmItc2MucmEvcV8vcWEvcl8wcGAucmEucWIvcmKRtqxglIc7emvz+veXuLDO4NudvrZUjH5Ui35jlYnC2NJWjH/a6eTn8e5Hg3Spx7////88emzC2NHn8u6dvrVWjX+dv7bm8u23GpiMAAAAFXRSTlMAgEAQcG+/v+/fQG9gX99wcGBf7++boPxMAAABKElEQVR4Xu2W126EMBBFDQtsSzZ1XOhsSc///17Q1ZLEgMkQKQ+RfJ6uLR/JupqHEd/wbOIAxOFsNV7RJ+vLWeoiIYvlQvCBa9l894IGROya1kN5herYNVGVgoas6ng1NQ9nKlZ1lktpJ6d2dayaqk5uONX1a3pNQdWvbswNCSgppaYBx/a6JDDWeQShMC1vQ/lkWpTz3wEEabpXFgrXEjn4QT70bPXOlcHp+KXqHCpTBnUuQV5D5Ms2fyp7OVNUPJlzAkXGlfePbdD7LgH9zJRzpBckgOMsWf5OPmh8u0sAR15hJRW1OSegsn80JH7C/IR5OYKspuQScuTeDErpRLk3A3FPLHZijCuefCtGWXLcxLUBMuzEvTzf7KbVu2sxRbgNnGw3wvMBGomoeTdS+vMAAAAASUVORK5CYII=" class="img-fluid active-img d-none" alt="紀錄">
+                </div>
+                <div class="fs-9 nav-title default" data-nav="record">
+                    紀錄
+                </div>
+            </a>
+        </li>
+        <li id="nav-search">
+            <a href="search.html" class="d-flex flex-column align-items-center text-decoration-none">
+                <div class="icon-blk mb-1">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAQlBMVEVHcEyvr6+vr6+vr6+vr6+xsbGvr6+wsLCvr6+wsLCvr6+wsLCvr6+wsLCvr6+wsLCvr6+wsLCwsLCwsLCwsLCwsLCg3A9KAAAAFXRSTlMAECAwQF9gb3B/gI+Qn6CvsL/P3++jlq4lAAABZUlEQVR42u3X0Y6DIBAF0DtAa0upLmXu///qxpJuTHDErfu06XlULzMBwYiPvyAhTUVJfeQY8CshKRf07vdHMxvZYQ+5cdVN0OUKDcWhwytNxe/Nah68ABKGiS/qd/WsURZX489lB5MUVkmAJTeyKgLLjdUFjQurGwyO1RkrzqwC1uW2bls7Y5Xn0x2GtFV67LwKopwlrFHOIkyRMxW0Ap8c0CkdzHG/sCGbfedmqhsXc/xH05OxHsWcL8EG4UzR4hNa9jPHw8fbLpx5bAicPdCa9i5VRis1d4zxo9mTCkzO3lbS3RhXc76A1CntysZ+D51TauSTf+cYGrg5o4HVCStO7Oz3RLP2wCr1D/27a7+c/ZVUVuW6iMtV+XLf95GchiCA+CErq3660NRPu0NpSVyVZNyRhsts5ABgVxp+VC5omqNN2hZifiipZUpBAJjpvn+UjkfSigNpxYF0wpuSavz80bzhG2xIQEtmZ2I0AAAAAElFTkSuQmCC" class="img-fluid default-img" alt="搜尋">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAolBMVEVHcEwucmIucWEucWEvb18ucWEvb18vb18vb18ucmEucmEvc18ucmEucWIucmItcWEucmIvcWEucWEucmEucWEucmIvcWEucWEucWEvcmLz+vedvrbm8u3a6eQ7emtglId4pZqRtq2Rtqzn8e6px7+dvrVsnJBIg3VHg3TC2NLC2NHO4Nrn8u48emydv7ZsnZCFraSFraPO4duFrqOEraPO4NvlvpMkAAAAGXRSTlMA75+gEJBAMCC/30Dv79+Aj5Cvz7/PgLDPGCkjsAAAAZJJREFUeF7t1NdywjAQQFELJHdsWorkRq/p5f9/Lc6ONWGCdlEwTxnu+5kVayTnEl3jrhiGTEo2CtLob9QVTB7EOp49HcujAt+K8r401uenrZ9IpOTkcI9JtMSztWWVfeZK5dtsJXXMszpzOa2hrphutCZOzrV911TziT45R7Hec6aOetI7x6zf2IUytGh0hODgYC46O0A2LaGJQnqhRnfBbgoMz0vAwoh7gGcKbQqYcYONJASDsdHouVOwK0VUARborpcUzgDfGfAN4B2F3wAn6L4eKDwHzAxYQopMQq3wpY+dAN5TeAt4ZMBD208VGLAAXFH4GXCK/j1L4kcX+LXithfDMSVOjC7WgDsAkGv1geGJhDzyGVoSq4ZdU6PpBxB9uYVEZ2eNHThYPGz05Nd7kr82lnEHze81ej074PnsUeo6Dp4HGlplu7yG+6wCaqVDSUZrv5XmwmwGvEtpnR8c07FbA1rrvG58KGPxTe00FKXBfVy7cChcDpLQdP9Ip200c87VgFvogXNmIo5vz2DXvgCJcZQbUvDkXQAAAABJRU5ErkJggg==" class="img-fluid active-img d-none" alt="搜尋">
+                </div>
+                <div class="fs-9 nav-title default" data-nav="search">
+                    搜尋
+                </div>
+            </a>
+        </li>
+        <li id="nav-setting">
+            <a href="setting.html" class="d-flex flex-column align-items-center text-decoration-none">
+                <div class="icon-blk mb-1">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAASFBMVEVHcEywsLCvr6+wsLCvr6+vr6+vr6+wsLCvr6+vr6+xsbGvr6+vr6+wsLCwsLCvr6+wsLCvr6+wsLCxsbGwsLCwsLCvr6+wsLD6z7zLAAAAF3RSTlMA3yDvEDCAv2BAX3BQz5+gf5BvT6+PsCaKXqwAAAHvSURBVHhe7ZZdk+sgCIaBRNR8bJue9uT//9OdBrcoo0m3k8vljuCjBF9RKOzP+sA80UcoXdbNvj7ACddkSB+yQve/hB9rZvxukVzc1sEc7iTi9jOI/gnMA9xSsVLR/kHYIndqs9fXUsJ4AK8fNru2WWMDwKjeLk2WRQDo0dKxCt8N27lnwHUG9tU6J+RnMDoJOFzLSK3mTliSwiK/xtA4PxccgIR2bVjG29lFoQLHdtoDNC200wZv6+ECc3B2wLw3cfL6a6oP3voE76Ymo0mEmp+qmOmgq7NTtvJgpaYrj5aTLPWXYlVWKA4+qHX2R6tJ7Qf88qjZc/Q0+IV9AljntPRF9az5dVuuUydOqfMvc55Uz06cCSD7f1fofO1tnX3a0SBeqY0gjnQUccW4TIXLrreU7kXdNryo24ZVmH6Ao7T7m08tURVSLVjMC2ILRs2tSruzzR7FweZWAWFVSp4XnwmP8Ehi3JbnaFillwRg+2DM4nRse4lOrAVXC9mRnE5vBrYNjahZHreh+b0G6OHs1hvzpg87Td8dXjfzjbS9obluTr7owL93xf6HmsWqJtF+JagaW3pUqR0/q/j4QcPQNLqnjjKVT6kRwrxFYhPNn2pFmXCLRIkYO/z/BX5hph8gnf9kPv+xrvjEHMoi/dk3j29mcU09w5wAAAAASUVORK5CYII=" class="img-fluid default-img" alt="設定">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAA51BMVEVHcEwvb18vb18vb18ucmEucmItcWEvc18ucmEucmIvcWEtcmIvcl8ucmEucWEucWEucWEvcl8ucWIucWEucmIvb18tc2MwcGAwcGAucmIucmEvb18tcWEtcmIvcV8vcWEvcmIscmIucmIvcWEucWEucWEucWHz+vepx79Ig3VHg3SRtqxjlYk8emydvrba6eTm8u07emvO4Nv///+qx7+dvrUvcmLC2NKXuLDO4NrL3NhglIc8e2yRtq3n8e7C2NF4pZq+085Ui36KsKaKr6adv7bO4dvn8u5UjH5Ti35Hg3XL3Ne+083XXafjAAAAJ3RSTlMAIBAw39+AQO9/gGBgv6Cfv1Dvr+9AX09fj89QcG9wcFBQz5CQsM+q0cUJAAACdUlEQVR4Xu2W13bbMAyGyUiWPJO4qZ3Vvagt75k5uvv+z1OLgESKh5Jsn/Yu/x1EfwcgCP8kyelZB23L6tK9UHo44zraA6e1GapG92ORPtgRPp9JsrZtkmHzPDUZfgkrRnkFveMEuOiT10Dd3QF9Slp85aRk+40sFTBrxtbpB1SjghVyGItEVEpTlfUYYzeeStta+ERhhyO20WiowB1tnxEZpnk3LKcht1jR9dwANmZO0iT3esBQcfSQNM9hMdBGMQy/B1Io5gHAdnHZDiuUU1w26eDZZlpOfH+yFDGc+QXRqQ2pkRz4IcTu9DvCEJ8RrV5wGLZ36/IA8FvYN865Vl0ps6OOmsj8StOuBo7vT553pojnxmJq57TIN6bJfl0VdpN9Xwtv0bNesuWvGASPiwABH+ZcRx+KeRb1havxRvdXsJCf8yPl/yTm+RsE92OuFUTLdM7VSXkP6DqCqZxAzWNUIE+eg+7QymALPIehfB4uUvgJN40CZ7LK4acUXpTDLSzbYVVlDyIs+1TyAZQrN2wF7B+5YdkA0MKjghO54u3+DUflcTbUHBWhpnaUgsVjIA1enOU1KdHSvtYyvQEMnsoi/QnxX2yjuQrPk68PENSbGi95s91f8l21Gcylyr15tRm0cjZ0EyE+zEwY4r4W/qAa4CgxwJFqgB3yr63Xlk2flZi+UXnd/JjGLDNht/K6wbLDUJ5znGdcKbsx9FcsIEKfiU621jJd9SslWjVVeoodltUkpIKuqw+aehmLovxpcXxGuvmn1FvS/sJXesUsPtVwzoVMvmLDyhayZPjjrm9tU0q8+7PXFOz/f6yr+KVltfNNetZfUDVT/vnFOCkAAAAASUVORK5CYII=" class="img-fluid active-img d-none" alt="設定">
+                </div>
+                <div class="fs-9 nav-title default" data-nav="setting">
+                    設定
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>   <!-- 引入 Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <!-- 在 main.js 之前执行脚本，确保 collapse 已经初始化 -->
+   <script>
+     document.addEventListener('DOMContentLoaded', function () {
+       // 确保 collapse 组件初始化为关闭状态
+       var collapseElement = document.getElementById('collapseExample');
+       var collapseInstance = new bootstrap.Collapse(collapseElement, {
+         toggle: false  // 默认不展开
+       });
+     });
+   </script>
+
+   <!-- 引入 main.js -->
+   
+ </body>
+</html>
+
